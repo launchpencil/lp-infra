@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zikanwari
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zikanwari
+  template:
+    metadata:
+      labels:
+        app: zikanwari
+    spec:
+      containers:
+      - name: zikanwari
+        image: registry.launchpencil.f5.si/zikanwari
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zikanwari
+spec:
+  type: NodePort
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: zikanwari

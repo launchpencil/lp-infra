@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmusic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jmusic
+  template:
+    metadata:
+      labels:
+        app: jmusic
+    spec:
+      containers:
+      - name: jmusic
+        image: registry.launchpencil.f5.si/jmusic
+      - name: jmusic-zikan
+        image: registry.launchpencil.f5.si/jmusic:zikan
+      dnsPolicy: Default
