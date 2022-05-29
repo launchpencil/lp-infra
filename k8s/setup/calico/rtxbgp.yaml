@@ -1,0 +1,7 @@
+apiVersion: projectcalico.org/v3
+kind: BGPPeer
+metadata:
+  name: rtx1100
+spec:
+  peerIP: 192.168.108.254
+  asNumber: 64512
