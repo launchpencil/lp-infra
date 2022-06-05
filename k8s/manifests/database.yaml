@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: database1
+  namespace: infra-backend
 spec:
   serviceName: database1
   replicas: 1
@@ -16,6 +17,12 @@ spec:
       containers:
       - name: database1
         image: mariadb
+        env:
+          - name: MARIADB_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: database1
+                key: rootpass
         volumeMounts:
         - name: database1
           mountPath: /var/lib/mysql/
@@ -36,6 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: database1
+  namespace: infra-backend
 spec:
   type: LoadBalancer
   ports:
