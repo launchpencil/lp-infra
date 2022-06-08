@@ -57,6 +57,9 @@ spec:
       containers:
       - name: phpmyadmin
         image: phpmyadmin/phpmyadmin
+        env:
+          - name: PMA_HOST
+            value: "database1.infra-backend.svc.cluster.local"
 
 ---
 
