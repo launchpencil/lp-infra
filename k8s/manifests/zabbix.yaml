@@ -29,7 +29,7 @@ spec:
                 secretKeyRef:
                   name: zabbix-server
                   key: pass
-        - name: zabbix-server
+        - name: zabbix-web
           image: zabbix/zabbix-web-nginx-mysql
           env:
             - name: DB_SERVER_HOST
