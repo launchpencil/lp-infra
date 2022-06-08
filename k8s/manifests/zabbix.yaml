@@ -30,7 +30,7 @@ spec:
                 name: zabbix-server
                 key: pass
       - name: zabbix-web
-        image: zabbix/zabbix-web-nginx-mysql
+        image: zabbix/zabbix-web-apache-mysql
         env:
           - name: DB_SERVER_HOST
             value: "10.1.100.198"
@@ -56,9 +56,9 @@ metadata:
     app: zabbix-server
 spec:
   type: LoadBalancer
-  selector:
-    app: zabbix-server
   ports:
   - name: http
     port: 80
     targetPort: 80
+  selector:
+    app: zabbix-server
