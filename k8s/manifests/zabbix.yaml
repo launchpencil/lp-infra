@@ -29,3 +29,36 @@ spec:
                 secretKeyRef:
                   name: zabbix-server
                   key: pass
+        - name: zabbix-server
+          image: zabbix/zabbix-web-nginx-mysql
+          env:
+            - name: DB_SERVER_HOST
+              value: "10.1.100.198"
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: zabbix-server
+                  key: user
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: zabbix-server
+                  key: pass
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: zabbix-server
+  namespace: monitor
+  labels:
+    app: zabbix-server
+spec:
+  type: LoadBalancer
+  selector:
+    app: zabbix-server
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
