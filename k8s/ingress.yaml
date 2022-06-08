@@ -5,8 +5,6 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-    kubernetes.io/tls-acme: 'true'
-    acme.cert-manager.io/http01-edit-in-place: "true"
   name: nginx01
   namespace: default
 spec:
