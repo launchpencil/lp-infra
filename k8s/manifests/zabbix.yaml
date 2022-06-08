@@ -18,7 +18,12 @@ spec:
           image: zabbix/zabbix-server-mysql
           env:
             - name: DB_SERVER_HOST
-              value: "database1.infra-backend.svc.cluster.local"
+              value: "10.1.100.198"
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: zabbix-server
+                  key: user
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:

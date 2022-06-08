@@ -59,7 +59,7 @@ spec:
         image: phpmyadmin/phpmyadmin
         env:
           - name: PMA_HOST
-            value: "database1.infra-backend.svc.cluster.local"
+            value: "10.1.100.198"
 
 ---
 
