@@ -14,36 +14,36 @@ spec:
         app: zabbix-server
     spec:
       containers:
-        - name: zabbix-server
-          image: zabbix/zabbix-server-mysql
-          env:
-            - name: DB_SERVER_HOST
-              value: "10.1.100.198"
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: zabbix-server
-                  key: user
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: zabbix-server
-                  key: pass
-        - name: zabbix-web
-          image: zabbix/zabbix-web-nginx-mysql
-          env:
-            - name: DB_SERVER_HOST
-              value: "10.1.100.198"
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: zabbix-server
-                  key: user
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: zabbix-server
-                  key: pass
+      - name: zabbix-server
+        image: zabbix/zabbix-server-mysql
+        env:
+          - name: DB_SERVER_HOST
+            value: "10.1.100.198"
+          - name: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                name: zabbix-server
+                key: user
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: zabbix-server
+                key: pass
+      - name: zabbix-web
+        image: zabbix/zabbix-web-nginx-mysql
+        env:
+          - name: DB_SERVER_HOST
+            value: "10.1.100.198"
+          - name: MYSQL_USER
+            valueFrom:
+              secretKeyRef:
+                name: zabbix-server
+                key: user
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: zabbix-server
+                key: pass
 
 ---
 
