@@ -1,9 +1,10 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: docker-registry
   namespace: infra-backend
 spec:
+  serviceName: docker-registry
   replicas: 1
   selector:
     matchLabels:
@@ -14,20 +15,22 @@ spec:
         app: docker-registry
     spec:
       containers:
-        - name: docker-registry
-          image: registry:2.6.2
-          env:
-            - name: REGISTRY_HTTP_ADDR
-              value: ":5000"
-            - name: REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY
-              value: "/var/lib/registry"
-          ports:
-          - name: http
-            containerPort: 5000
-          volumeMounts:
-          - name: image-store
-            mountPath: "/var/lib/registry"
-      volumes:
+      - name: docker-registry
+        image: registry:2.6.2
+        env:
+          - name: REGISTRY_HTTP_ADDR
+            value: ":5000"
+          - name: REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY
+            value: "/var/lib/registry"
+        volumeMounts:
         - name: image-store
-          persistentVolumeClaim:
-            claimName: image-store
+          mountPath: "/var/lib/registry"
+  volumeClaimTemplates:
+  - metadata:
+      name: image-store
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 8Gi
