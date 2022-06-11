@@ -16,6 +16,11 @@ spec:
       containers:
       - name: zabbix-server
         image: zabbix/zabbix-server-mysql
+        volumeMounts:
+        - name: snmptraps
+          mountPath: /var/lib/zabbix/snmptraps
+        - name: mibs
+          mountPath: /var/lib/zabbix/mibs
         env:
           - name: DB_SERVER_HOST
             value: "database1-0.database1.infra-backend.svc.cluster.local"
@@ -31,6 +36,8 @@ spec:
                 key: pass
           - name: ZBX_STARTVMWARECOLLECTORS
             value: "5"
+          - name: ZBX_ENABLE_SNMP_TRAPS
+            value: "true"
       - name: zabbix-web
         image: zabbix/zabbix-web-nginx-mysql
         env:
@@ -46,3 +53,17 @@ spec:
               secretKeyRef:
                 name: zabbix-server
                 key: pass
+      - name: zabbix-snmptraps
+        image: zabbix/zabbix-snmptraps
+        volumeMounts:
+        - name: snmptraps
+          mountPath: /var/lib/zabbix/snmptraps
+        - name: mibs
+          mountPath: /var/lib/zabbix/mibs
+    volumes:
+    - name: snmptraps
+      persistentVolumeClaim:
+        claimName: trap
+    - name: mibs
+      persistentVolumeClaim:
+        claimName: mib

@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: snmp
+  namespace: monitor
+spec:
+  resources:
+    requests:
+      storage: 8Gi
+  accessModes:
+  - ReadWriteOnce
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mib
+  namespace: monitor
+spec:
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+  - ReadWriteOnce
