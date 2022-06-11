@@ -29,6 +29,8 @@ spec:
               secretKeyRef:
                 name: zabbix-server
                 key: pass
+          - name: ZBX_STARTVMWARECOLLECTORS
+            value: "5"
       - name: zabbix-web
         image: zabbix/zabbix-web-nginx-mysql
         env:
@@ -44,8 +46,7 @@ spec:
               secretKeyRef:
                 name: zabbix-server
                 key: pass
-          - name: ZBX_STARTVMWARECOLLECTORS
-            value: "5"
+      dnsPolicy: Default
 
 ---
 
