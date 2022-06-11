@@ -1,8 +1,9 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: nextcloud
 spec:
+  serviceName: nextcloud
   replicas: 1
   selector:
     matchLabels:
@@ -17,8 +18,13 @@ spec:
         image: nextcloud
         volumeMounts:
         - name: nextcloud
-          mountPath: "/var/www/html/"
-      volumes:
-        - name: nextcloud
-          persistentVolumeClaim:
-            claimName: nextcloud
+          mountPath: /var/www/html/
+  volumeClaimTemplates:
+  - metadata:
+      name: nextcloud
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 32Gi
