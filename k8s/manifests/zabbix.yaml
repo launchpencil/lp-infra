@@ -44,6 +44,8 @@ spec:
               secretKeyRef:
                 name: zabbix-server
                 key: pass
+          - name: ZBX_STARTVMWARECOLLECTORS
+            value: "5"
 
 ---
 
