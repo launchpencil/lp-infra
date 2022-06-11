@@ -18,4 +18,4 @@ spec:
         image: phpmyadmin/phpmyadmin
         env:
           - name: PMA_HOST
-            value: "10.0.0.3"
+            value: "10.104.241.242"
