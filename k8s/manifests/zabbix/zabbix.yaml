@@ -35,7 +35,7 @@ spec:
         image: zabbix/zabbix-web-nginx-mysql
         env:
           - name: DB_SERVER_HOST
-            value: "10.1.100.198"
+            value: "database1-0.database1.infra-backend.svc.cluster.local"
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
