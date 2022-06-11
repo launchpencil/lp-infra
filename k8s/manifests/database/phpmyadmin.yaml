@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin
+  namespace: infra-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database1
+  template:
+    metadata:
+      labels:
+        app: database1
+    spec:
+      containers:
+      - name: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        env:
+          - name: PMA_HOST
+            value: "10.1.100.198"

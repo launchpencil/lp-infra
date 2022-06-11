@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: docker-registry
+  namespace: infra-backend
+  labels:
+    app: docker-registry
+spec:
+  type: LoadBalancer
+  selector:
+    app: docker-registry
+  ports:
+  - name: http
+    port: 5000
+    targetPort: 5000

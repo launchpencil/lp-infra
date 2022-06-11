@@ -17,4 +17,3 @@ spec:
         image: registry.launchpencil.f5.si/jmusic
       - name: jmusic-zikan
         image: registry.launchpencil.f5.si/jmusic:zikan
-      dnsPolicy: Default
