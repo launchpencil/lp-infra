@@ -60,10 +60,10 @@ spec:
           mountPath: /var/lib/zabbix/snmptraps
         - name: mibs
           mountPath: /var/lib/zabbix/mibs
-    volumes:
-    - name: snmptraps
-      persistentVolumeClaim:
-        claimName: trap
-    - name: mibs
-      persistentVolumeClaim:
-        claimName: mib
+      volumes:
+      - name: snmptraps
+        persistentVolumeClaim:
+          claimName: trap
+      - name: mibs
+        persistentVolumeClaim:
+          claimName: mib
