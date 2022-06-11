@@ -9,6 +9,7 @@ spec:
       storage: 8Gi
   accessModes:
   - ReadWriteOnce
+  storageClassName: nfs-client
 
 ---
 
@@ -23,3 +24,4 @@ spec:
       storage: 1Gi
   accessModes:
   - ReadWriteOnce
+  storageClassName: nfs-client
