@@ -14,9 +14,7 @@ spec:
   - name: snmp
     port: 162
     targetPort: 162
-  - name: snmp-udp
+  - protocol: TCP
   - protocol: UDP
-    port: 162
-    targetPort: 162
   selector:
     app: zabbix-server
