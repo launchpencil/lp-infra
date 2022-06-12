@@ -11,5 +11,8 @@ spec:
   - name: http
     port: 80
     targetPort: 8080
+  - name: snmp
+    port: 162
+    targetPort: 162
   selector:
     app: zabbix-server
