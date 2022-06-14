@@ -37,6 +37,6 @@ spec:
   secretName: nextcloud-tls
   issuerRef:
     name: letsencrypt
-  commonName: launchpencil.f5.si
+  commonName: cloud.launchpencil.f5.si
   dnsNames:
   - cloud.launchpencil.f5.si
