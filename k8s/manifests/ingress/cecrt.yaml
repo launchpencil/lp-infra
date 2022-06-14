@@ -1,0 +1,42 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nginx01
+  namespace: default
+spec:
+  secretName: nginx01-tls
+  issuerRef:
+    name: letsencrypt
+  commonName: launchpencil.f5.si
+  dnsNames:
+  - launchpencil.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zikanwari
+  namespace: default
+spec:
+  secretName: zikanwari-tls
+  issuerRef:
+    name: letsencrypt
+  commonName: zikanwari.f5.si
+  dnsNames:
+  - zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nextcloud
+  namespace: default
+spec:
+  secretName: nextcloud-tls
+  issuerRef:
+    name: letsencrypt
+  commonName: launchpencil.f5.si
+  dnsNames:
+  - cloud.launchpencil.f5.si
