@@ -40,18 +40,3 @@ spec:
   commonName: cloud.launchpencil.f5.si
   dnsNames:
   - cloud.launchpencil.f5.si
-
----
-
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: registry
-  namespace: infra-backend
-spec:
-  secretName: registry-tls
-  issuerRef:
-    name: letsencrypt
-  commonName: registry.launchpencil.f5.si
-  dnsNames:
-  - registry.launchpencil.f5.si
