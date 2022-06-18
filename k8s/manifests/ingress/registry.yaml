@@ -17,7 +17,3 @@ spec:
             name: docker-registry 
             port:
               number: 80
-  tls:
-  - hosts:
-    - registry.launchpencil.f5.si
-    secretName: registry-tls
