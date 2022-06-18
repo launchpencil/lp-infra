@@ -7,6 +7,7 @@ spec:
   secretName: nginx01-tls
   issuerRef:
     name: letsencrypt
+    kind: ClusterIssuer
   commonName: launchpencil.f5.si
   dnsNames:
   - launchpencil.f5.si
@@ -22,6 +23,7 @@ spec:
   secretName: zikanwari-tls
   issuerRef:
     name: letsencrypt
+    kind: ClusterIssuer
   commonName: zikanwari.f5.si
   dnsNames:
   - zikanwari.f5.si
@@ -37,6 +39,7 @@ spec:
   secretName: nextcloud-tls
   issuerRef:
     name: letsencrypt
+    kind: ClusterIssuer
   commonName: cloud.launchpencil.f5.si
   dnsNames:
   - cloud.launchpencil.f5.si
@@ -52,6 +55,7 @@ spec:
   secretName: registry-tls
   issuerRef:
     name: letsencrypt
+    kind: ClusterIssuer
   commonName: registry.launchpencil.f5.si
   dnsNames:
   - registry.launchpencil.f5.si
