@@ -40,6 +40,16 @@ spec:
             name: nextcloud
             port:
               number: 80
+  - host: registry.launchpencil.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: docker-registry.infra-backend
+            port:
+              number: 80
   tls:
   - hosts:
     - launchpencil.f5.si
@@ -50,3 +60,6 @@ spec:
   - hosts:
     - cloud.launchpencil.f5.si
     secretName: nextcloud-tls
+  - hosts:
+    - registry.launchpencil.f5.si
+    secretName: registry-tls
