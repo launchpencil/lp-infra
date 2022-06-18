@@ -60,6 +60,3 @@ spec:
   - hosts:
     - cloud.launchpencil.f5.si
     secretName: nextcloud-tls
-  - hosts:
-    - registry.launchpencil.f5.si
-    secretName: registry-tls
