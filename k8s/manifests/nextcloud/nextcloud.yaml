@@ -19,6 +19,9 @@ spec:
         volumeMounts:
         - name: nextcloud
           mountPath: /var/www/html/
+        env:
+          - name: OVERWRITEPROTOCOL
+            value: "https"
   volumeClaimTemplates:
   - metadata:
       name: nextcloud
