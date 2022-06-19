@@ -5,8 +5,6 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-    use-proxy-protocol: "true"
-    proxy-set-headers: proxy_set_header X-Forwarded-Host $host;proxy_set_header host $host;
   name: nginx01
   namespace: default
 spec:
