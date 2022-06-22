@@ -579,7 +579,7 @@ metadata:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.2.1
-  name: nginx
+  name: argo-nginx
 spec:
   controller: k8s.io/argo-ingress-nginx
 ---
