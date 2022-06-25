@@ -71,7 +71,7 @@ metadata:
   labels:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
+    app.kubernetes.io/name: argo-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.2.1
   name: ingress-nginx-argo-controller
