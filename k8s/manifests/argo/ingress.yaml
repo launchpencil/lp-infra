@@ -1,0 +1,90 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  name: argo
+  namespace: infra-backend
+spec:
+  ingressClassName: nginx-cf
+  rules:
+  - host: manage.launchpencil.site
+    http:
+      paths:
+      - path: /db
+        pathType: Prefix
+        backend:
+          service:
+            name: database
+            port:
+              number: 80
+      - path: /dash
+        pathType: Prefix
+        backend:
+          service:
+            name: dashboard
+            port:
+              number: 80
+      - path: /argo
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd
+            port:
+              number: 80
+      - path: /argo
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd
+            port:
+              number: 80
+      - path: /zabbix
+        pathType: Prefix
+        backend:
+          service:
+            name: zabbix
+            port:
+              number: 80
+      - path: /nas
+        pathType: Prefix
+        backend:
+          service:
+            name: truenas
+            port:
+              number: 80
+      - path: /rocky
+        pathType: Prefix
+        backend:
+          service:
+            name: rocky
+            port:
+              number: 80
+      - path: /pve
+        pathType: Prefix
+        backend:
+          service:
+            name: proxmox
+            port:
+              number: 80
+      - path: /esxi
+        pathType: Prefix
+        backend:
+          service:
+            name: esxi
+            port:
+              number: 80
+      - path: /switch
+        pathType: Prefix
+        backend:
+          service:
+            name: bs2108m
+            port:
+              number: 80
+      - path: /rtx
+        pathType: Prefix
+        backend:
+          service:
+            name: rtx1100
+            port:
+              number: 80
