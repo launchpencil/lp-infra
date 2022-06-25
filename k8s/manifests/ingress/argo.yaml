@@ -10,7 +10,7 @@ spec:
   - host: manage.launchpencil.site
     http:
       paths:
-      - path: /db
+      - path: /
         pathType: Prefix
         backend:
           service:
