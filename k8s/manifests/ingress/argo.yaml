@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: argo-nginx
   rules:
-  - host: manage.launchpencil.f5.si
+  - host: manage.launchpencil.site
     http:
       paths:
       - path: /db
