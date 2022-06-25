@@ -40,7 +40,7 @@ spec:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/name: argo-ingress-nginx
-  type: ClusterIP
+  type: CLoadBalancer
 ---
 apiVersion: v1
 kind: Service
