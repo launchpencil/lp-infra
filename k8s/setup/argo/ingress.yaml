@@ -96,7 +96,7 @@ spec:
         - /nginx-ingress-controller
         - --publish-service=$(POD_NAMESPACE)/argo-ingress-nginx-controller
         - --election-id=ingress-controller-leader
-        - --controller-class=k8s.io/argo-ingress-nginx
+        - --controller-class=k8s.io/argo-nginx
         - --ingress-class=argo-nginx
         - --configmap=$(POD_NAMESPACE)/ingress-nginx-controller
         - --validating-webhook=:8443
