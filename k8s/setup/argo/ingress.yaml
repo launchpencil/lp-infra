@@ -284,7 +284,7 @@ metadata:
     app.kubernetes.io/version: 1.2.1
   name: argo-nginx
 spec:
-  controller: k8s.io/argo-ingress-nginx
+  controller: k8s.io/argo-nginx
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
