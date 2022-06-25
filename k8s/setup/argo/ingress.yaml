@@ -175,7 +175,7 @@ spec:
       volumes:
       - name: webhook-cert
         secret:
-          secretName: ingress-nginx-admission
+          secretName: argo-ingress-nginx-admission
 ---
 apiVersion: batch/v1
 kind: Job
@@ -204,7 +204,7 @@ spec:
         - create
         - --host=argo-ingress-nginx-controller-admission,argo-ingress-nginx-controller-admission.$(POD_NAMESPACE).svc
         - --namespace=$(POD_NAMESPACE)
-        - --secret-name=ingress-nginx-admission
+        - --secret-name=argo-ingress-nginx-admission
         env:
         - name: POD_NAMESPACE
           valueFrom:
@@ -252,7 +252,7 @@ spec:
         - --webhook-name=argo-ingress-nginx-admission
         - --namespace=$(POD_NAMESPACE)
         - --patch-mutating=false
-        - --secret-name=ingress-nginx-admission
+        - --secret-name=argo-ingress-nginx-admission
         - --patch-failure-policy=Fail
         env:
         - name: POD_NAMESPACE
