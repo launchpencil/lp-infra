@@ -5,7 +5,7 @@ metadata:
   name: argo
   namespace: infra-backend
 spec:
-  ingressClassName: argo-nginx
+  ingressClassName: internal-nginx
   rules:
   - host: manage.launchpencil.site
     http:
