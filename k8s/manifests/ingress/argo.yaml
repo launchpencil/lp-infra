@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+  name: argo
+  namespace: infra-backend
+spec:
+  ingressClassName: argo-nginx
+  rules:
+  - host: manage.launchpencil.f5.si
+    http:
+      paths:
+      - path: /db
+        pathType: Prefix
+        backend:
+          service:
+            name: database1
+            port:
+              number: 80

@@ -6,7 +6,7 @@ metadata:
   labels:
     app: docker-registry
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: docker-registry
   ports:
