@@ -8,10 +8,10 @@ metadata:
 spec:
   ingressClassName: nginx-cf
   rules:
-  - host: manage.launchpencil.site
+  - host: launchpencil.site
     http:
       paths:
-      - path: /db
+      - path: /
         pathType: Prefix
         backend:
           service:
