@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+  namespace: cloudflared
+spec:
+  type: ExternalName
+  externalName: database1.infra-backend.svc.cluster.local
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard
+  namespace: cloudflared
+spec:
+  type: ExternalName
+  externalName: kubernetes-dashboard.kubernetes-dashboard.svc.cluster.local
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd
+  namespace: cloudflared
+spec:
+  type: ExternalName
+  externalName: argocd-server.argocd.svc.cluster.local
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zabbix
+  namespace: cloudflared
+spec:
+  type: ExternalName
+  externalName: zabbix-server.monitor.svc.cluster.local

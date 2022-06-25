@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-  name: argo
+  name: cloudflared
   namespace: infra-backend
 spec:
   ingressClassName: nginx-cf
@@ -11,7 +11,7 @@ spec:
   - host: launchpencil.site
     http:
       paths:
-      - path: /
+      - path: /db
         pathType: Prefix
         backend:
           service:
@@ -23,13 +23,6 @@ spec:
         backend:
           service:
             name: dashboard
-            port:
-              number: 80
-      - path: /argo
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd
             port:
               number: 80
       - path: /argo
