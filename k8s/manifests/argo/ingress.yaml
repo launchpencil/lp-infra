@@ -4,7 +4,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
   name: cloudflared
-  namespace: infra-backend
+  namespace: cloudflared
 spec:
   ingressClassName: nginx-cf
   rules:
