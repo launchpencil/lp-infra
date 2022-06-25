@@ -1,7 +1,5 @@
-apiVersion: v1
-data:
-  allow-snippet-annotations: "true"
-kind: ConfigMap
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/component: controller
@@ -11,71 +9,6 @@ metadata:
     app.kubernetes.io/version: 1.2.1
   name: ingress-nginx-controller
   namespace: ingress-nginx
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: argo-ingress-nginx-controller
-  namespace: ingress-nginx
-spec:
-  externalTrafficPolicy: Local
-  ports:
-  - appProtocol: http
-    name: http
-    port: 80
-    protocol: TCP
-    targetPort: http
-  - appProtocol: https
-    name: https
-    port: 443
-    protocol: TCP
-    targetPort: https
-  selector:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-  type: LoadBalancer
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: argo-ingress-nginx-controller-admission
-  namespace: ingress-nginx
-spec:
-  ports:
-  - appProtocol: https
-    name: https-webhook
-    port: 443
-    targetPort: webhook
-  selector:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-  type: ClusterIP
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: ingress-nginx-argo-controller
-  namespace: ingress-nginx
 spec:
   minReadySeconds: 0
   revisionHistoryLimit: 10
@@ -83,21 +16,21 @@ spec:
     matchLabels:
       app.kubernetes.io/component: controller
       app.kubernetes.io/instance: ingress-nginx
-      app.kubernetes.io/name: argo-ingress-nginx
+      app.kubernetes.io/name: ingress-nginx
   template:
     metadata:
       labels:
         app.kubernetes.io/component: controller
         app.kubernetes.io/instance: ingress-nginx
-        app.kubernetes.io/name: argo-ingress-nginx
+        app.kubernetes.io/name: ingress-nginx
     spec:
       containers:
       - args:
         - /nginx-ingress-controller
-        - --publish-service=$(POD_NAMESPACE)/argo-ingress-nginx-controller
+        - --publish-service=$(POD_NAMESPACE)/ingress-nginx-controller
         - --election-id=ingress-controller-leader
-        - --controller-class=k8s.io/argo-nginx
-        - --ingress-class=argo-nginx
+        - --controller-class=k8s.io/internal-ingress-nginx
+        - --ingress-class=k8s.io/internal-nginx
         - --configmap=$(POD_NAMESPACE)/ingress-nginx-controller
         - --validating-webhook=:8443
         - --validating-webhook-certificate=/usr/local/certificates/cert
@@ -130,7 +63,7 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
-        name: controller
+        name: ingress-nginx-internal-controller
         ports:
         - containerPort: 80
           name: http
@@ -175,103 +108,7 @@ spec:
       volumes:
       - name: webhook-cert
         secret:
-          secretName: argo-ingress-nginx-admission
----
-apiVersion: batch/v1
-kind: Job
-metadata:
-  labels:
-    app.kubernetes.io/component: admission-webhook
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: argo-ingress-nginx-admission-create
-  namespace: ingress-nginx
-spec:
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/component: admission-webhook
-        app.kubernetes.io/instance: ingress-nginx
-        app.kubernetes.io/name: argo-ingress-nginx
-        app.kubernetes.io/part-of: ingress-nginx
-        app.kubernetes.io/version: 1.2.1
-      name: argo-ingress-nginx-admission-create
-    spec:
-      containers:
-      - args:
-        - create
-        - --host=argo-ingress-nginx-controller-admission,argo-ingress-nginx-controller-admission.$(POD_NAMESPACE).svc
-        - --namespace=$(POD_NAMESPACE)
-        - --secret-name=argo-ingress-nginx-admission
-        env:
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        image: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.1.1@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660
-        imagePullPolicy: IfNotPresent
-        name: create
-        securityContext:
-          allowPrivilegeEscalation: false
-      nodeSelector:
-        kubernetes.io/os: linux
-      restartPolicy: OnFailure
-      securityContext:
-        fsGroup: 2000
-        runAsNonRoot: true
-        runAsUser: 2000
-      serviceAccountName: ingress-nginx-admission
----
-apiVersion: batch/v1
-kind: Job
-metadata:
-  labels:
-    app.kubernetes.io/component: admission-webhook
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: argo-ingress-nginx-admission-patch
-  namespace: ingress-nginx
-spec:
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/component: admission-webhook
-        app.kubernetes.io/instance: ingress-nginx
-        app.kubernetes.io/name: argo-ingress-nginx
-        app.kubernetes.io/part-of: ingress-nginx
-        app.kubernetes.io/version: 1.2.1
-      name: argo-ingress-nginx-admission-patch
-    spec:
-      containers:
-      - args:
-        - patch
-        - --webhook-name=argo-ingress-nginx-admission
-        - --namespace=$(POD_NAMESPACE)
-        - --patch-mutating=false
-        - --secret-name=argo-ingress-nginx-admission
-        - --patch-failure-policy=Fail
-        env:
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
-        image: registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.1.1@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660
-        imagePullPolicy: IfNotPresent
-        name: patch
-        securityContext:
-          allowPrivilegeEscalation: false
-      nodeSelector:
-        kubernetes.io/os: linux
-      restartPolicy: OnFailure
-      securityContext:
-        fsGroup: 2000
-        runAsNonRoot: true
-        runAsUser: 2000
-      serviceAccountName: ingress-nginx-admission
+          secretName: ingress-nginx-admission
 ---
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
@@ -279,42 +116,9 @@ metadata:
   labels:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-nginx
+    app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/part-of: ingress-nginx
     app.kubernetes.io/version: 1.2.1
-  name: argo-nginx
+  name: internal-nginx
 spec:
-  controller: k8s.io/argo-nginx
----
-apiVersion: admissionregistration.k8s.io/v1
-kind: ValidatingWebhookConfiguration
-metadata:
-  labels:
-    app.kubernetes.io/component: admission-webhook
-    app.kubernetes.io/instance: ingress-nginx
-    app.kubernetes.io/name: argo-ingress-nginx
-    app.kubernetes.io/part-of: ingress-nginx
-    app.kubernetes.io/version: 1.2.1
-  name: argo-ingress-nginx-admission
-webhooks:
-- admissionReviewVersions:
-  - v1
-  clientConfig:
-    service:
-      name: argo-ingress-nginx-controller-admission
-      namespace: ingress-nginx
-      path: /networking/v1/ingresses
-  failurePolicy: Fail
-  matchPolicy: Equivalent
-  name: validate.nginx.ingress.kubernetes.io
-  rules:
-  - apiGroups:
-    - networking.k8s.io
-    apiVersions:
-    - v1
-    operations:
-    - CREATE
-    - UPDATE
-    resources:
-    - ingresses
-  sideEffects: None
+  controller: k8s.io/internal-ingress-nginx
