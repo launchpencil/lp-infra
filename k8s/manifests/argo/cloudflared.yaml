@@ -84,3 +84,4 @@ data:
           noTLSVerify: true
     - hostname: rtx.launchpencil.site
       service: http://rtx1100.cloudflared:80
+    - service: http_status:404
