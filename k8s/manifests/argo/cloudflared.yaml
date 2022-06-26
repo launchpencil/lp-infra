@@ -78,4 +78,8 @@ data:
     ingress:
     - hostname: k8s.launchpencil.site
       service: http://10.0.0.2:80
+    - hostname: pve.launchpencil.site
+      service: https://192.168.101.11:8006
+      originRequest:
+          noTLSVerify: true
     - service: http_status:404
