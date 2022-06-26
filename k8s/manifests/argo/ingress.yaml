@@ -24,14 +24,14 @@ spec:
           service:
             name: dashboard
             port:
-              number: 80
+              number: 443
       - path: /argo
         pathType: Prefix
         backend:
           service:
             name: argocd
             port:
-              number: 80
+              number: 443
       - path: /zabbix
         pathType: Prefix
         backend:
