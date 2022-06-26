@@ -76,10 +76,6 @@ data:
     metrics: 0.0.0.0:2000
     no-autoupdate: true
     ingress:
-    - hostname: k8s.launchpencil.site
-      service: https://10.0.0.2:443
-      originRequest:
-          noTLSVerify: true
     - hostname: pve.launchpencil.site
       service: https://192.168.101.11:8006
       originRequest:
@@ -98,4 +94,6 @@ data:
           noTLSVerify: true
     - hostname: switch.launchpencil.site
       service: http://192.168.101.253:80
+    - hostname: zabbix.launchpencil.site
+      service: http://zabbix-server.monitor:80
     - service: http_status:404
