@@ -53,13 +53,6 @@ spec:
             name: rocky
             port:
               number: 80
-      - path: /pve
-        pathType: Prefix
-        backend:
-          service:
-            name: proxmox
-            port:
-              number: 80
       - path: /esxi
         pathType: Prefix
         backend:
