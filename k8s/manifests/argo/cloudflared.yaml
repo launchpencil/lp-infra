@@ -95,5 +95,5 @@ data:
     - hostname: switch.launchpencil.site
       service: http://192.168.101.253:80
     - hostname: zabbix.launchpencil.site
-      service: http://10.0.0.4:80
+      service: http://zabbix-server.monitor:80
     - service: http_status:404
