@@ -82,4 +82,3 @@ data:
       service: https://proxmox.cloudflared:8006
       originRequest:
           noTLSVerify: true
-    - service: http_status:404
