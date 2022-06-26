@@ -82,3 +82,5 @@ data:
       service: https://192.168.101.11:8006
       originRequest:
           noTLSVerify: true
+    - hostname: rtx.launchpencil.site
+      service: http://rtx1100.cloudflared:80
