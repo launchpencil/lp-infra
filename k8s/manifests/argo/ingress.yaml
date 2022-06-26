@@ -39,38 +39,3 @@ spec:
             name: zabbix
             port:
               number: 80
-      - path: /nas
-        pathType: Prefix
-        backend:
-          service:
-            name: truenas
-            port:
-              number: 80
-      - path: /rocky
-        pathType: Prefix
-        backend:
-          service:
-            name: rocky
-            port:
-              number: 80
-      - path: /esxi
-        pathType: Prefix
-        backend:
-          service:
-            name: esxi
-            port:
-              number: 80
-      - path: /switch
-        pathType: Prefix
-        backend:
-          service:
-            name: bs2108m
-            port:
-              number: 80
-      - path: /rtx
-        pathType: Prefix
-        backend:
-          service:
-            name: rtx1100
-            port:
-              number: 80
