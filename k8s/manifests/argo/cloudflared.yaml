@@ -81,21 +81,23 @@ data:
       originRequest:
           noTLSVerify: true
     - hostname: rtx.launchpencil.site
-      service: http://192.168.108.254:80
+      service: http://192.168.108.254
     - hostname: rocky.launchpencil.site
       service: https://192.168.0.1:9090
       originRequest:
           noTLSVerify: true
     - hostname: nas.launchpencil.site
-      service: http://192.168.0.2:80
+      service: http://192.168.0.2
     - hostname: esxi.launchpencil.site
-      service: https://192.168.101.1:443
+      service: https://192.168.101.1
       originRequest:
           noTLSVerify: true
     - hostname: switch.launchpencil.site
-      service: http://192.168.101.253:80
+      service: http://192.168.101.253
     - hostname: zabbix.launchpencil.site
-      service: http://zabbix-server.monitor:80
+      service: http://zabbix-server.monitor
     - hostname: dash.launchpencil.site
       service: https://kubernetes-dashboard.kubernetes-dashboard
+    - hostname: argo.launchpencil.site
+      service: https://argocd-server.argocd
     - service: http_status:404
