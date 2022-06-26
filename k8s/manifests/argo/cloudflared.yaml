@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: cloudflared
-        image: cloudflare/cloudflared:2022.3.0
+        image: cloudflare/cloudflared
         args:
         - tunnel
         # Points cloudflared to the config file, which configures what
@@ -74,8 +74,8 @@ data:
     tunnel: launchpencil.site
     credentials-file: /etc/cloudflared/creds/credentials.json
     metrics: 0.0.0.0:2000
-    no-autoupdate: true
+    no-autoupdate: false
     ingress:
-    - hostname: launchpencil.site
+    - hostname: *launchpencil.site
       service: http://10.0.0.2:80
     - service: http_status:404
