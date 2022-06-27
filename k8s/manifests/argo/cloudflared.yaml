@@ -1,8 +1,8 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cloudflared
+  namespace: infra-backend
 spec:
   selector:
     matchLabels:
@@ -69,6 +69,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: cloudflared
+  namespace: infra-backend
 data:
   config.yaml: |
     tunnel: manage
