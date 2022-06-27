@@ -104,4 +104,6 @@ data:
       service: https://argocd-server.argocd
       originRequest:
           noTLSVerify: true
+    - hostname: db.launchpencil.site
+      service: http://database1.infra-backend
     - service: http_status:404
