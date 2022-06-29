@@ -15,3 +15,16 @@ spec:
       containers:
       - name: zikanwari
         image: registry.launchpencil.f5.si/zikanwari
+        env:
+          - name: DB
+            value: "database1-0.database1.infra-backend.svc.cluster.local"
+          - name: USER
+            valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: user
+          - name: PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: pass
