@@ -13,8 +13,8 @@ spec:
         app: zikanwari
     spec:
       containers:
-      - name: zikanwari
-        image: registry.launchpencil.f5.si/zikanwari
+      - name: zikanwari-web
+        image: registry.launchpencil.f5.si/zikanwari:web
         env:
           - name: DB
             value: "database1-0.database1.infra-backend.svc.cluster.local"
@@ -28,3 +28,11 @@ spec:
               secretKeyRef:
                 name: zikanwari
                 key: pass
+      - name: zikanwari-bot
+        image: registry.launchpencil.f5.si/zikanwari:bot
+        env:
+          - name: TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: token
