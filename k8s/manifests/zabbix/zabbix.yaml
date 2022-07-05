@@ -38,7 +38,7 @@ spec:
             value: "5"
           - name: ZBX_ENABLE_SNMP_TRAPS
             value: "true"
-          - name: AllowUnsupportedDBVersion
+          - name: ZBX_ALLOWUNSUPPORTEDDBVERSIONS
             value: "1"
       - name: zabbix-web
         image: zabbix/zabbix-web-nginx-mysql
