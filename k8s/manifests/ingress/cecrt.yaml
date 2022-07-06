@@ -59,3 +59,19 @@ spec:
   commonName: registry.launchpencil.f5.si
   dnsNames:
   - registry.launchpencil.f5.si
+  
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  secretName: grafana-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: grafana.launchpencil.f5.si
+  dnsNames:
+  - grafana.launchpencil.f5.si
