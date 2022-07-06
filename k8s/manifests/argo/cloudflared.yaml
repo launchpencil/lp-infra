@@ -98,7 +98,7 @@ data:
     - hostname: zabbix.launchpencil.site
       service: http://zabbix-server.monitor
     - hostname: grafana.launchpencil.site
-      service: http://grafana.monitoring:3000
+      service: http://grafana.monitoring
     - hostname: dash.launchpencil.site
       service: https://kubernetes-dashboard.kubernetes-dashboard
       originRequest:
