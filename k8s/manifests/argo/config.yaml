@@ -42,5 +42,5 @@ data:
     - hostname: db.launchpencil.site
       service: http://database1.infra-backend
     - hostname: grafana.launchpencil.site
-      service: http://grafana.monitoring
+      service: http://grafana.monitoring:3000
     - service: http_status:404
