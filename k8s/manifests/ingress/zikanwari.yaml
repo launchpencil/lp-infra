@@ -20,3 +20,7 @@ spec:
             name: zikanwari
             port:
               number: 80
+  tls:
+  - hosts:
+    - zikanwari.f5.si
+    secretName: zikanwari-tls

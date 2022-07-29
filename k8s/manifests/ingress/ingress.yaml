@@ -35,8 +35,5 @@ spec:
     - launchpencil.f5.si
     secretName: nginx01-tls
   - hosts:
-    - zikanwari.f5.si
-    secretName: zikanwari-tls
-  - hosts:
     - cloud.launchpencil.f5.si
     secretName: nextcloud-tls
