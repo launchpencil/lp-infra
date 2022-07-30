@@ -16,7 +16,7 @@ spec:
       - name: pon-web
         image: registry.launchpencil.f5.si/pon:latest
         volumeMounts:
-        - mountPath: "/var/www/html/upload"
+        - mountPath: "/upload"
           name: pon-pvc
       - name: pon-convert
         image: registry.launchpencil.f5.si/pon:convert
