@@ -13,10 +13,13 @@ spec:
         app: pon
     spec:
       containers:
-      - name: pon-convert
-        image: registry.launchpencil.f5.si/pon:convert
       - name: pon-web
         image: registry.launchpencil.f5.si/pon:latest
+        volumeMounts:
+        - mountPath: "/var/www/html/upload"
+          name: pon-pvc
+      - name: pon-convert
+        image: registry.launchpencil.f5.si/pon:convert
         volumeMounts:
         - mountPath: "/var/www/html/upload"
           name: pon-pvc
