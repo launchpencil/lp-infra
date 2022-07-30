@@ -12,6 +12,7 @@ spec:
       labels:
         app: pon
     spec:
+      restartPolicy: OnFailure
       containers:
       - name: pon-web
         image: registry.launchpencil.f5.si/pon:latest
