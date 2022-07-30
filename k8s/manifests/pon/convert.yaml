@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pon
+  name: pon-convert
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pon
+      app: pon-convert
   template:
     metadata:
       labels:
-        app: pon
+        app: pon-convert
     spec:
       containers:
-      - name: pon-web
-        image: registry.launchpencil.f5.si/pon:latest
+      - name: pon-convert
+        image: registry.launchpencil.f5.si/pon:convert
         volumeMounts:
-        - mountPath: "/var/www/html/upload"
+        - mountPath: "/upload"
           name: pon-pvc
       volumes:
       - name: pon-pvc
