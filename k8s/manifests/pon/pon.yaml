@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pon
+  template:
+    metadata:
+      labels:
+        app: pon
+    spec:
+      containers:
+      - name: pon-web
+        image: registry.launchpencil.f5.si/pon:latest
+        volumeMounts:
+        - mountPath: "/var/www/html/upload"
+          name: pon-pvc
+      volumes:
+      - name: pon-pvc
+        persistentVolumeClaim:
+          claimName: pon-pvc

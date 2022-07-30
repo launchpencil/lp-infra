@@ -20,7 +20,20 @@ spec:
             name: zikanwari
             port:
               number: 80
+  - host: pon.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pon
+            port:
+              number: 80
   tls:
   - hosts:
     - zikanwari.f5.si
     secretName: zikanwari-tls
+  - hosts:
+    - pon.zikanwari.f5.si
+    secretName: pon-tls
