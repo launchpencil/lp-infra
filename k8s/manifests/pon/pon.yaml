@@ -22,3 +22,5 @@ spec:
       - name: pon-pvc
         persistentVolumeClaim:
           claimName: pon-pvc
+      - name: pon-convert
+        image: registry.launchpencil.f5.si/pon:convert
