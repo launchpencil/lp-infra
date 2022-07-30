@@ -62,3 +62,15 @@ spec:
   
 ---
 
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: pon
+spec:
+  secretName: pon-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: pon.zikanwari.f5.si
+  dnsNames:
+  - pon.zikanwari.f5.si
