@@ -13,6 +13,8 @@ spec:
         app: pon
     spec:
       containers:
+      - name: pon-convert
+        image: registry.launchpencil.f5.si/pon:convert
       - name: pon-web
         image: registry.launchpencil.f5.si/pon:latest
         volumeMounts:
@@ -22,5 +24,3 @@ spec:
       - name: pon-pvc
         persistentVolumeClaim:
           claimName: pon-pvc
-      - name: pon-convert
-        image: registry.launchpencil.f5.si/pon:convert
