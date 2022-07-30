@@ -27,6 +27,3 @@ spec:
       - name: pon-pvc
         persistentVolumeClaim:
           claimName: pon-pvc
-      template:
-        spec:
-          restartPolicy: OnFailure
