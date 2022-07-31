@@ -3,10 +3,9 @@ kind: Ingress
 metadata:
   name: zikanwari
   annotations:
-    # type of authentication
     nginx.ingress.kubernetes.io/auth-type: basic
-    # name of the secret that contains the user/password definitions
     nginx.ingress.kubernetes.io/auth-secret: zikan-auth
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
 spec:
   ingressClassName: nginx
   rules:
