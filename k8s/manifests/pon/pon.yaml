@@ -18,6 +18,12 @@ spec:
         volumeMounts:
         - mountPath: "/var/www/html/upload"
           name: pon-pvc
+      - name: pon-convert
+        image: registry.launchpencil.f5.si/pon:convert
+        imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: "/upload"
+          name: pon-pvc
       volumes:
       - name: pon-pvc
         persistentVolumeClaim:
