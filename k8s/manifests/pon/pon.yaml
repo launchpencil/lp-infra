@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
       - name: pon-web
-        image: registry.launchpencil.f5.si/pon:latest
+        image: ghcr.io/launchpencil/pon:latest
         volumeMounts:
         - mountPath: "/var/www/html/upload"
           name: pon-pvc
       - name: pon-convert
-        image: registry.launchpencil.f5.si/pon:convert
+        image: ghcr.io/launchpencil/pon:convert
         imagePullPolicy: Always
         volumeMounts:
         - mountPath: "/upload"
