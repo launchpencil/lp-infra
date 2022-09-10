@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-  name: harbor
+  name: registry
   namespace: infra-backend
 spec:
   ingressClassName: nginx
@@ -15,7 +15,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: harbor
+            name: docker-registry
             port:
               number: 80
   tls:
@@ -31,6 +31,7 @@ metadata:
   name: harbor
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
+  namespace: harbor
 spec:
   tls:
   - hosts:
