@@ -1,24 +1,61 @@
-#apiVersion: networking.k8s.io/v1
-#kind: Ingress
-#metadata:
-#  annotations:
-#    nginx.ingress.kubernetes.io/proxy-body-size: "0"
-#  name: harbor
-#  namespace: infra-backend
-#spec:
-#  ingressClassName: nginx
-#  rules:
-#  - host: registry.launchpencil.f5.si
-#    http:
-#      paths:
-#      - path: /
-#        pathType: Prefix
-#        backend:
-#          service:
-#            name: harbor
-#            port:
-#              number: 80
-#  tls:
-#  - hosts:
-#    - registry.launchpencil.f5.si
-#    secretName: registry-tls
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+  name: harbor
+  namespace: infra-backend
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: registry.launchpencil.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: harbor
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - registry.launchpencil.f5.si
+    secretName: registry-tls
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: harbor
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+spec:
+  tls:
+  - hosts:
+    - "core.harbor.launchpencil.f5.si"
+    - "notary.harbor.launchpencil.f5.si"
+    secretName: harbor-tls
+  rules:
+  - host: "core.harbor.launchpencil.f5.si"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: harbor
+            port:
+              number: 80
+  - host: "notary.harbor.launchpencil.f5.si"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: harbor
+            port:
+              number: 80
+  ingressClassName: nginx

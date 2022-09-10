@@ -74,3 +74,18 @@ spec:
   commonName: pon.zikanwari.f5.si
   dnsNames:
   - pon.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: pon
+spec:
+  secretName: harbor-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  dnsNames:
+  - "core.harbor.launchpencil.f5.si"
+  - "notary.harbor.launchpencil.f5.si"
