@@ -40,7 +40,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: harbor
+            name: harbor-portal
             port:
               number: 80
   tls:
