@@ -38,12 +38,3 @@ spec:
               secretKeyRef:
                 name: zikanwari
                 key: token
-      - name: zikanwari-line
-        image: ghcr.io/launchpencil/zikanwari:line
-        imagePullPolicy: Always
-        env:
-          - name: LINE_ACCESS_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: line
