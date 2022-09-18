@@ -29,16 +29,6 @@ spec:
             name: pon
             port:
               number: 80
-  - host: line.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: zikanwari-line
-            port:
-              number: 3000
   tls:
   - hosts:
     - zikanwari.f5.si
@@ -46,6 +36,3 @@ spec:
   - hosts:
     - pon.zikanwari.f5.si
     secretName: pon-tls
-  - hosts:
-    - line.zikanwari.f5.si
-    secretName: line-tls
