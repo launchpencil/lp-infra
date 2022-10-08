@@ -30,6 +30,16 @@ spec:
             name: nextcloud
             port:
               number: 80
+  - host: line.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: zikanwari-line
+            port:
+              number: 3000
   tls:
   - hosts:
     - launchpencil.f5.si
@@ -37,3 +47,6 @@ spec:
   - hosts:
     - cloud.launchpencil.f5.si
     secretName: nextcloud-tls
+  - hosts:
+    - line.zikanwari.f5.si
+    secretName: line-tls

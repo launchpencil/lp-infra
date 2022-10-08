@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zikanwari-line
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zikanwari-line
+  template:
+    metadata:
+      labels:
+        app: zikanwari-line
+    spec:
+      containers:
+      - name: zikanwari-line
+        image: ghcr.io/launchpencil/zikanwari:line
+        imagePullPolicy: Always
+        env:
+          - name: LINE_ACCESS_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: line
