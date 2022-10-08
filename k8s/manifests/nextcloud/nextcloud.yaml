@@ -26,6 +26,7 @@ spec:
   - metadata:
       name: nextcloud
     spec:
+      storageClassName: ssd-client
       accessModes:
       - ReadWriteOnce
       resources:
