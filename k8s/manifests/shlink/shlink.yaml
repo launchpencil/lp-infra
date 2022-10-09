@@ -22,5 +22,3 @@ spec:
             value: "false"
           - name: GEOLITE_LICENSE_KEY
             value: "vFoxNzQk8O6PilLp"
-      - name: shlink
-        image: ghcr.io/shlinkio/shlink-web-client
