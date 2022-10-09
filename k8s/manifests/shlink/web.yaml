@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: shlink
-        image: ghcr.io/shlinkio/shlink-web-client
+        image: shlinkio/shlink-web-client
