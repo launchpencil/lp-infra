@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shlink
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shlink
+  template:
+    metadata:
+      labels:
+        app: shlink
+    spec:
+      containers:
+      - name: shlink
+        image: ghcr.io/shlinkio/shlink
+        env:
+          - name: DEFAULT_DOMAIN
+            value: "s.zikanwari.f5.si"
+          - name: IS_HTTPS_ENABLED
+            value: "false"
+          - name: GEOLITE_LICENSE_KEY
+            value: "vFoxNzQk8O6PilLp"
