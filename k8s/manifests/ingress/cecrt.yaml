@@ -90,7 +90,7 @@ spec:
   dnsNames:
   - "core.harbor.launchpencil.f5.si"
   - "notary.harbor.launchpencil.f5.si"
-    
+
 ---
 
 apiVersion: cert-manager.io/v1
@@ -105,3 +105,18 @@ spec:
   commonName: line.zikanwari.f5.si
   dnsNames:
   - line.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: shlink
+spec:
+  secretName: shlink-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: s.zikanwari.f5.si
+  dnsNames:
+  - s.zikanwari.f5.si
