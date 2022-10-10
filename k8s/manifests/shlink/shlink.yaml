@@ -22,3 +22,14 @@ spec:
             value: "false"
           - name: GEOLITE_LICENSE_KEY
             value: "vFoxNzQk8O6PilLp"
+          - name: DB_DRIVER
+            value: "mysql"
+          - name: DB_USER
+            value: "shlink"
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: shlink
+                key: dbpass
+          - name: DB_HOST
+            value: "database1-0.database1.infra-backend.svc.cluster.local"
