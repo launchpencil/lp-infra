@@ -40,6 +40,16 @@ spec:
             name: zikanwari-line
             port:
               number: 3000
+  - host: s.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: shlink
+            port:
+              number: 80
   tls:
   - hosts:
     - launchpencil.f5.si
@@ -50,3 +60,6 @@ spec:
   - hosts:
     - line.zikanwari.f5.si
     secretName: line-tls
+  - hosts:
+    - s.zikanwari.f5.si
+    secretName: shlink-tls
