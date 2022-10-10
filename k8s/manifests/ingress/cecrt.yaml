@@ -120,3 +120,18 @@ spec:
   commonName: s.zikanwari.f5.si
   dnsNames:
   - s.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: shlink-lp
+spec:
+  secretName: lp-shlink-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: s.launchpencil.f5.si
+  dnsNames:
+  - s.launchpencil.f5.si
