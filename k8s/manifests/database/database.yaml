@@ -26,6 +26,15 @@ spec:
         volumeMounts:
         - name: database1
           mountPath: /var/lib/mysql/
+        - name: conf
+          mountPath: /etc/mysql/
+      volumes:
+        - name: conf
+          configMap:
+            name: dbconfig
+            items:
+            - key: my.cnf
+              path: my.cnf
   volumeClaimTemplates:
   - metadata:
       name: database1
