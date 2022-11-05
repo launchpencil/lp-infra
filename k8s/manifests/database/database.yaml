@@ -27,7 +27,7 @@ spec:
         - name: database1
           mountPath: /var/lib/mysql/
         - name: conf
-          mountPath: /etc/mysql/conf.d/
+          mountPath: /etc/mysql/my.cnf.d/
       volumes:
         - name: conf
           configMap:
