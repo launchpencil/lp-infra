@@ -27,14 +27,14 @@ spec:
         - name: database1
           mountPath: /var/lib/mysql/
         - name: conf
-          mountPath: /etc/mysql
+          mountPath: /etc/mysql/conf.d/
       volumes:
         - name: conf
           configMap:
             name: dbconfig
             items:
-            - key: my.cnf
-              path: my.cnf
+            - key: rescue.cnf
+              path: rescue.cnf
   volumeClaimTemplates:
   - metadata:
       name: database1
