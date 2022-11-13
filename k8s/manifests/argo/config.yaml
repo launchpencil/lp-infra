@@ -44,7 +44,5 @@ data:
     - hostname: grafana.launchpencil.site
       service: http://grafana.monitoring:3000
     - service: http_status:404
-    tunnel: 2bbf44a2-0d00-4484-9bd9-ff939038e335
-    credentials-file: /etc/cloudflared/creds/credentials.json
     warp-routing:
         enabled: true
