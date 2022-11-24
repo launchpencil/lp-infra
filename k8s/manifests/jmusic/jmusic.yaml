@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: jmusic
-        image: registry.launchpencil.f5.si/jmusic
+        image: core.harbor.registry.launchpencil.f5.si/k8s/jmusic
       - name: jmusic-zikan
-        image: registry.launchpencil.f5.si/jmusic:zikan
+        image: core.harbor.launchpencil.f5.si/k8s/jmusic:zikan
         imagePullPolicy: Always
