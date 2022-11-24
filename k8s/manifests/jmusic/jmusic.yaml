@@ -18,3 +18,5 @@ spec:
       - name: jmusic-zikan
         image: core.harbor.launchpencil.f5.si/k8s/jmusic:zikan
         imagePullPolicy: Always
+      imagePullSecrets:
+      - name: registry-harbor
