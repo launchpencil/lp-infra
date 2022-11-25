@@ -135,3 +135,18 @@ spec:
   commonName: s.launchpencil.f5.si
   dnsNames:
   - s.launchpencil.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: multisong
+spec:
+  secretName: multisong-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: multisong.zikanwari.f5.si
+  dnsNames:
+  - multisong.zikanwari.f5.si
