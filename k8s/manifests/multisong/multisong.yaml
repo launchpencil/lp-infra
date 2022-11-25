@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multisong
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multisong
+  template:
+    metadata:
+      labels:
+        app: multisong
+    spec:
+      containers:
+      - name: multisong
+        image: ghcr.io/launchpencil/multisong
