@@ -141,12 +141,12 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: multisong
+  name: multipart
 spec:
-  secretName: multisong-tls
+  secretName: multipart-tls
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
-  commonName: multisong.zikanwari.f5.si
+  commonName: multipart.zikanwari.f5.si
   dnsNames:
-  - multisong.zikanwari.f5.si
+  - multipart.zikanwari.f5.si
