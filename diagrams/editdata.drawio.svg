@@ -1,8 +1,842 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="711px" height="714px" viewBox="-0.5 -0.5 711 714" content="&lt;mxfile&gt;&lt;diagram id=&quot;jUWLNYtvDkhMP8iCuSxC&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;"><defs><clipPath id="mx-clip-14-673-132-30-0"><rect x="14" y="673" width="132" height="30"/></clipPath><clipPath id="mx-clip-589-548-92-30-0"><rect x="589" y="548" width="92" height="30"/></clipPath></defs><g><rect x="315" y="20.5" width="395" height="585" rx="59.25" ry="59.25" fill="#cce5ff" stroke="#36393d" pointer-events="all"/><rect x="345" y="318.45" width="230" height="277.05" rx="34.5" ry="34.5" fill="#fad7ac" stroke="#b46504" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 228px; height: 1px; padding-top: 457px; margin-left: 347px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><font color="#000000"><span style="text-align: center"><div style="text-align: justify"><span>　　ESXiィィィィ　　（Sundyなi5）</span></div></span><span style="text-align: center"><div style="text-align: justify"><span>　　スタンドアロォォォォォン</span></div></span></font><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"> </font></div><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px"><font color="#000000"><br /></font></blockquote><blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px"><br /></blockquote></div></div></div></foreignObject><text x="347" y="461" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">ESXiィィィィ　　（Sundyなi5）　　スタンドアロォォォォォン...</text></switch></g><rect x="355" y="363.25" width="210" height="222.25" rx="31.5" ry="31.5" fill="#f5f5f5" stroke="#666666" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 208px; height: 1px; padding-top: 474px; margin-left: 356px;"><div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />　　　　　　　　　　　VM軍</div></div></div></foreignObject><text x="460" y="478" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">VM軍...</text></switch></g><rect x="0" y="365.69" width="280" height="347.31" rx="42" ry="42" fill="#b0e3e6" stroke="#0e8088" pointer-events="all"/><rect x="340.75" y="38.32" width="330" height="267.18" rx="40.08" ry="40.08" fill="#fad7ac" stroke="#b46504" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 328px; height: 1px; padding-top: 172px; margin-left: 343px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><font color="#000000"><span style="text-align: center"><div style="text-align: justify"><span>　　proxmoxゥゥゥ</span></div></span><span style="text-align: center"><div style="text-align: justify"><span>　　クラスタァァァァ</span></div></span></font><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"><br /></font></div><div style="text-align: justify"><font color="#000000"> </font></div><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote><blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px"><font color="#000000"><br /></font></blockquote><blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px"><br /></blockquote></div></div></div></foreignObject><text x="343" y="176" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">proxmoxゥゥゥ　　クラスタァァァァ...</text></switch></g><rect x="475.25" y="53.25" width="175.5" height="242.25" rx="26.32" ry="26.32" fill="#f5f5f5" stroke="#666666" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 174px; height: 1px; padding-top: 174px; margin-left: 476px;"><div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">VM軍<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div></div></foreignObject><text x="563" y="178" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">VM軍...</text></switch></g><rect x="40" y="288" width="80" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 313px; margin-left: 41px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">ONU</div></div></div></foreignObject><text x="80" y="317" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">ONU</text></switch></g><rect x="160" y="163" width="120" height="190" rx="18" ry="18" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 258px; margin-left: 161px;"><div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">水牛業務用スイッチ<br /><div>（<b>現状</b>普通）</div></div></div></div></foreignObject><text x="220" y="262" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">水牛業務用スイッチ
-（現状普通）</text></switch></g><path d="M 275 205.5 L 320 205.5 Q 330 205.5 330 196.9 L 330 192.6 Q 330 188.3 339.69 188.28 L 349.38 188.26" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 354.63 188.25 L 347.64 191.77 L 349.38 188.26 L 347.63 184.77 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 275 205.5 L 320 205.5 Q 330 205.5 330 195.5 L 330 130.5 Q 330 120.5 339.44 120.5 L 348.88 120.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 354.13 120.5 L 347.13 124 L 348.88 120.5 L 347.13 117 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 275 205.5 L 320 205.5 Q 330 205.5 330 215.5 L 330 248 Q 330 258 339.69 258 L 349.38 258" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 354.63 258 L 347.63 261.5 L 349.38 258 L 347.63 254.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="165" y="178" width="110" height="55" rx="8.25" ry="8.25" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 206px; margin-left: 166px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">VLAN<br />(鯖・k8s用)</div></div></div></foreignObject><text x="220" y="209" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">VLAN...</text></switch></g><path d="M 165 313 L 153 313 Q 143 313 143 303 L 143 248 Q 143 238 134.68 238 L 126.37 238" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 121.12 238 L 128.12 234.5 L 126.37 238 L 128.12 241.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 220 343 L 220 377.25" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 220 382.5 L 216.5 375.5 L 220 377.25 L 223.5 375.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="165" y="283" width="110" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 313px; margin-left: 166px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">VLAN（ONU用）</div></div></div></foreignObject><text x="220" y="317" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">VLAN（ONU用）</text></switch></g><path d="M 120 313 L 133 313 Q 143 313 150.82 313 L 158.63 313" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 163.88 313 L 156.88 316.5 L 158.63 313 L 156.88 309.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 173.25 403.6 L 161.37 403.61" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 156.12 403.62 L 163.11 400.11 L 161.37 403.61 L 163.12 407.11 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 220 423.62 L 220 429.86 Q 220 436.1 220.18 439.18 L 220.37 442.26" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 220.68 447.5 L 216.77 440.73 L 220.37 442.26 L 223.76 440.31 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="173.25" y="383.62" width="93.5" height="40" rx="6" ry="6" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 92px; height: 1px; padding-top: 404px; margin-left: 174px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Atermルーター</div></div></div></foreignObject><text x="220" y="407" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">Atermルーター</text></switch></g><path d="M 80 213 L 80 209.5 Q 80 206 90 206 L 158.63 206" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 163.88 206 L 156.88 209.5 L 158.63 206 L 156.88 202.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="40" y="213" width="80" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 238px; margin-left: 41px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">RTX1100</div></div></div></foreignObject><text x="80" y="242" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">RTX1100</text></switch></g><path d="M 25 373.62 L 135 373.62 L 155 403.62 L 135 433.62 L 25 433.62 L 5 403.62 Z" fill="#2a2a2a" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 404px; margin-left: 6px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">一般的な品々<br />（クソデカテレビ等）</div></div></div></foreignObject><text x="80" y="407" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">一般的な品々
-（クソデカテレビ等）</text></switch></g><path d="M 173.25 473.62 L 167.48 473.61 Q 161.7 473.6 151.7 473.54 L 90 473.16 Q 80 473.1 80 474.93 L 80 476.76" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 80 482.01 L 76.5 475.01 L 80 476.76 L 83.5 475.01 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 173.25 473.6 L 171.63 473.6 Q 170 473.6 170 483.6 L 170 553 Q 170 563 160 563 L 77.5 563 Q 67.5 563 67.5 569.82 L 67.5 576.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 67.5 581.88 L 64 574.88 L 67.5 576.63 L 71 574.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 220.75 498.62 L 220.75 546.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 220.75 551.88 L 217.25 544.88 L 220.75 546.63 L 224.25 544.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="173.25" y="448.62" width="95" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 93px; height: 1px; padding-top: 474px; margin-left: 174px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">普通の<br />スイッチ</div></div></div></foreignObject><text x="221" y="477" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">普通の
-スイッチ</text></switch></g><path d="M 64.17 635.9 L 64.19 653 Q 64.2 663 74.2 663 L 138.63 663" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 143.88 663 L 136.88 666.5 L 138.63 663 L 136.88 659.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 262.5 663 L 266.25 663 Q 270 663 270 657 L 270 654 Q 270 651 280 651 L 303.63 651" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 308.88 651 L 301.88 654.5 L 303.63 651 L 301.88 647.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="145" y="633" width="117.5" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 116px; height: 1px; padding-top: 663px; margin-left: 146px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">ChromeBook<br />(音ゲー＆鯖いじり)</div></div></div></foreignObject><text x="204" y="667" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">ChromeBook...</text></switch></g><rect x="355.75" y="230.5" width="111" height="55" rx="8.25" ry="8.25" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 109px; height: 1px; padding-top: 258px; margin-left: 357px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><font color="#000000">raspberry pi 3B<br />(1GB,SD)<br /></font></div></div></div></foreignObject><text x="411" y="262" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">raspberry pi 3B...</text></switch></g><rect x="355.25" y="90.5" width="110" height="60" rx="9" ry="9" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 121px; margin-left: 356px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><font color="#000000">raspberry pi 4B<br />(4GB Model)<br />(SSD)</font></div></div></div></foreignObject><text x="410" y="124" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">raspberry pi 4B...</text></switch></g><rect x="355.75" y="158.25" width="110" height="60" rx="9" ry="9" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 188px; margin-left: 357px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;"><font color="#000000">raspberry pi 3B+<br />(1GB,SD)<br /></font></div></div></div></foreignObject><text x="411" y="192" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">raspberry pi 3B+...</text></switch></g><rect x="490.75" y="168" width="140" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 193px; margin-left: 492px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">NFS鯖<br />（PVC用）</div></div></div></foreignObject><text x="561" y="197" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">NFS鯖...</text></switch></g><rect x="10" y="483.13" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 513px; margin-left: 11px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">家族用PC<br />（と称されたVMホスト、NAS鯖）</div></div></div></foreignObject><text x="80" y="517" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">家族用PC...</text></switch></g><rect x="375" y="527.5" width="110" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 553px; margin-left: 376px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">VPN鯖<br />（けしからんやつ）</div></div></div></foreignObject><text x="430" y="556" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">VPN鯖...</text></switch></g><path d="M 399.82 653.69 L 420 653.7 Q 430 653.7 430 643.7 L 430 583.87" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 430 578.62 L 433.5 585.62 L 430 583.87 L 426.5 585.62 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="310" y="628" width="90" height="45" rx="6.75" ry="6.75" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 651px; margin-left: 311px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">鯖メンテ用<br />VPN</div></div></div></foreignObject><text x="355" y="654" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">鯖メンテ用
-VPN</text></switch></g><path d="M 260.75 583 L 265.38 583 Q 270 583 270 593 L 270 641 Q 270 651 280 651 L 303.63 651" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 308.88 651 L 301.88 654.5 L 303.63 651 L 301.88 647.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="180.75" y="553" width="80" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 583px; margin-left: 182px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">メイン機<br />（自作）</div></div></div></foreignObject><text x="221" y="587" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">メイン機
-（自作）</text></switch></g><rect x="20" y="583" width="95" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 93px; height: 1px; padding-top: 608px; margin-left: 21px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">自室水牛AP<br />（Wifiのみ用）</div></div></div></foreignObject><text x="68" y="612" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">自室水牛AP...</text></switch></g><rect x="10" y="673" width="140" height="30" fill="none" stroke="none" pointer-events="all"/><g fill="#000000" font-family="Helvetica" clip-path="url(#mx-clip-14-673-132-30-0)" font-size="12px"><text x="15.5" y="692.5">個人用回線（v6プラス）</text></g><rect x="490.75" y="95.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 126px; margin-left: 492px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">ロギング・プロキシ鯖<br />（ﾝｷﾞｯｯｯｸｽ!)</div></div></div></foreignObject><text x="561" y="129" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">ロギング・プロキシ鯖
-（ﾝｷﾞｯｯｯｸｽ!)</text></switch></g><rect x="490.75" y="225.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 256px; margin-left: 492px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">コントローラーノード<br />（冗長化したい…）</div></div></div></foreignObject><text x="561" y="259" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">コントローラーノード
-（冗長化したい…）</text></switch></g><rect x="375" y="455.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 486px; margin-left: 376px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">ワーカーノード*3<br />（筐体増やしたい）</div></div></div></foreignObject><text x="445" y="489" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">ワーカーノード*3...</text></switch></g><rect x="375" y="385.5" width="170" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 416px; margin-left: 376px;"><div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">TrueNAS<br />（バックアップ・個人利用）</div></div></div></foreignObject><text x="460" y="419" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">TrueNAS...</text></switch></g><path d="M 275 205.5 L 320 205.5 Q 330 205.5 330 215.5 L 330 403.7 Q 330 413.7 338.58 413.7 L 347.16 413.7" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 352.41 413.7 L 345.41 417.2 L 347.16 413.7 L 345.41 410.2 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="585" y="325.5" width="100" height="200" rx="15" ry="15" fill="#f5f5f5" stroke="#666666" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 426px; margin-left: 586px;"><div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">使ってる<br />セグメント<br /><br />個人用<br />管理用<br />VM用<br />k8sクラスタ用<br /><br />&lt;&lt;BGP内&gt;&gt;<br />Pod用<br />LB用</div></div></div></foreignObject><text x="635" y="429" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">使ってるセグメント個人用管理用VM用...</text></switch></g><rect x="585" y="547.5" width="100" height="30" fill="none" stroke="none" pointer-events="all"/><g fill="#000000" font-family="Helvetica" clip-path="url(#mx-clip-589-548-92-30-0)" font-size="12px"><text x="590.5" y="560">鯖用回線</text><text x="590.5" y="574">（PPPoE+IPoE）</text></g><path d="M 80.63 40 C 22.13 40 7.5 80 54.3 88 C 7.5 105.6 60.15 144 98.17 128 C 124.5 160 212.25 160 241.5 128 C 300 128 300 96 263.44 80 C 300 48 241.5 16 190.31 32 C 153.75 8 95.25 8 80.63 40 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 291px; height: 1px; padding-top: 80px; margin-left: 9px;"><div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;"><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">Grafana Cloud（無料枠）<br /><br />nginxログ解析<br />k8sモニタリング<br />Web生きてるか確認</div></div></div></foreignObject><text x="154" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">Grafana Cloud（無料枠）...</text></switch></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="712px" height="715px" viewBox="-0.5 -0.5 712 715" content="&lt;mxfile&gt;&lt;diagram id=&quot;jUWLNYtvDkhMP8iCuSxC&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+    <defs>
+        <clipPath id="mx-clip-14-673-132-30-0">
+            <rect x="14" y="673" width="132" height="30"/>
+        </clipPath>
+        <clipPath id="mx-clip-589-548-92-30-0">
+            <rect x="589" y="548" width="92" height="30"/>
+        </clipPath>
+    </defs>
+    <g>
+        <rect x="315" y="20.5" width="395" height="585" rx="59.25" ry="59.25" fill="#cce5ff" stroke="#36393d" pointer-events="all"/>
+        <rect x="345" y="318.45" width="230" height="277.05" rx="34.5" ry="34.5" fill="#fad7ac" stroke="#b46504" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 228px; height: 1px; padding-top: 457px; margin-left: 347px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <font color="#000000">
+                                    <span style="text-align: center">
+                                        <div style="text-align: justify">
+                                            <span>
+                                                ESXiィィィィ　　（Sundyなi5）
+                                            </span>
+                                        </div>
+                                    </span>
+                                    <span style="text-align: center">
+                                        <div style="text-align: justify">
+                                            <span>
+                                                スタンドアロォォォォォン
+                                            </span>
+                                        </div>
+                                    </span>
+                                </font>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                    </font>
+                                </div>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </blockquote>
+                                <blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px">
+                                    <br/>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="347" y="461" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    ESXiィィィィ　　（Sundyなi5）　　スタンドアロォォォォォン...
+                </text>
+            </switch>
+        </g>
+        <rect x="355" y="363.25" width="210" height="222.25" rx="31.5" ry="31.5" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 208px; height: 1px; padding-top: 474px; margin-left: 356px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                VM軍
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="460" y="478" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    VM軍...
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="365.69" width="280" height="347.31" rx="42" ry="42" fill="#b0e3e6" stroke="#0e8088" pointer-events="all"/>
+        <rect x="340.75" y="38.32" width="330" height="267.18" rx="40.08" ry="40.08" fill="#fad7ac" stroke="#b46504" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 328px; height: 1px; padding-top: 172px; margin-left: 343px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <font color="#000000">
+                                    <span style="text-align: center">
+                                        <div style="text-align: justify">
+                                            <span>
+                                                proxmoxゥゥゥ
+                                            </span>
+                                        </div>
+                                    </span>
+                                    <span style="text-align: center">
+                                        <div style="text-align: justify">
+                                            <span>
+                                                クラスタァァァァ
+                                            </span>
+                                        </div>
+                                    </span>
+                                </font>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </div>
+                                <div style="text-align: justify">
+                                    <font color="#000000">
+                                    </font>
+                                </div>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="margin: 0 0 0 40px ; border: none ; padding: 0px"></blockquote>
+                                <blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px">
+                                    <font color="#000000">
+                                        <br/>
+                                    </font>
+                                </blockquote>
+                                <blockquote style="text-align: center ; margin: 0px 0px 0px 40px ; border: none ; padding: 0px">
+                                    <br/>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="343" y="176" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    proxmoxゥゥゥ　　クラスタァァァァ...
+                </text>
+            </switch>
+        </g>
+        <rect x="475.25" y="53.25" width="175.5" height="242.25" rx="26.32" ry="26.32" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 174px; height: 1px; padding-top: 174px; margin-left: 476px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                VM軍
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="563" y="178" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    VM軍...
+                </text>
+            </switch>
+        </g>
+        <rect x="40" y="288" width="80" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 313px; margin-left: 41px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                ONU
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="317" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ONU
+                </text>
+            </switch>
+        </g>
+        <rect x="160" y="163" width="120" height="190" rx="18" ry="18" fill="#1ba1e2" stroke="#006eaf" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 258px; margin-left: 161px;">
+                        <div data-drawio-colors="color: #ffffff; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(255, 255, 255); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                水牛業務用スイッチ
+                                <br/>
+                                <div>
+                                    （BS-G2108M）
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="262" fill="#ffffff" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    水牛業務用スイッチ
+（BS-G2108M）
+                </text>
+            </switch>
+        </g>
+        <path d="M 275 205.5 L 320.02 205.49 Q 330.02 205.49 330.02 196.88 L 330.02 192.58 Q 330.02 188.28 339.7 188.27 L 349.38 188.26" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 354.63 188.25 L 347.64 191.76 L 349.38 188.26 L 347.63 184.76 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 275 205.5 L 320.02 205.49 Q 330.02 205.49 330.02 195.49 L 330.02 130.51 Q 330.02 120.51 339.45 120.51 L 348.88 120.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 354.13 120.5 L 347.13 124 L 348.88 120.5 L 347.13 117 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 275 205.5 L 320.02 205.49 Q 330.02 205.49 330.02 215.49 L 330.02 248 Q 330.02 258 339.7 258 L 349.38 258" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 354.63 258 L 347.63 261.5 L 349.38 258 L 347.63 254.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="165" y="178" width="110" height="55" rx="8.25" ry="8.25" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 205px; margin-left: 166px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                VLAN
+                                <br/>
+                                (鯖・k8s用)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="209" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    VLAN...
+                </text>
+            </switch>
+        </g>
+        <path d="M 165 313 L 152.4 313 Q 142.4 313 142.4 303 L 142.4 248 Q 142.4 238 134.38 238 L 126.37 238" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 121.12 238 L 128.12 234.5 L 126.37 238 L 128.12 241.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 220 343 L 220 377.25" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 220 382.5 L 216.5 375.5 L 220 377.25 L 223.5 375.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="165" y="283" width="110" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 313px; margin-left: 166px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                VLAN（ONU用）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="317" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    VLAN（ONU用）
+                </text>
+            </switch>
+        </g>
+        <path d="M 120 313 L 132.4 313 Q 142.4 313 150.51 313 L 158.63 313" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 163.88 313 L 156.88 316.5 L 158.63 313 L 156.88 309.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 173.25 403.62 L 161.37 403.59" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 156.12 403.58 L 163.13 400.1 L 161.37 403.59 L 163.11 407.1 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 220 423.62 L 220.01 429.86 Q 220.02 436.09 220.2 439.18 L 220.38 442.26" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 220.69 447.5 L 216.79 440.72 L 220.38 442.26 L 223.77 440.31 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="173.25" y="383.62" width="93.5" height="40" rx="6" ry="6" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 92px; height: 1px; padding-top: 404px; margin-left: 174px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Atermルーター
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="220" y="407" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Atermルーター
+                </text>
+            </switch>
+        </g>
+        <path d="M 80 213 L 80.01 209.5 Q 80.02 206 90.02 206 L 158.63 206" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 163.88 206 L 156.88 209.5 L 158.63 206 L 156.88 202.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="40" y="213" width="80" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 238px; margin-left: 41px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                RTX1100
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="242" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    RTX1100
+                </text>
+            </switch>
+        </g>
+        <path d="M 25 373.62 L 135 373.62 L 155 403.62 L 135 433.62 L 25 433.62 L 5 403.62 Z" fill="#2a2a2a" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 404px; margin-left: 6px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                一般的な品々
+                                <br/>
+                                （クソデカテレビ等）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="407" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    一般的な品々
+（クソデカテレビ等）
+                </text>
+            </switch>
+        </g>
+        <path d="M 173.25 473.62 L 167.45 473.6 Q 161.65 473.58 151.65 473.52 L 90.02 473.17 Q 80.02 473.12 80.02 474.94 L 80.01 476.76" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 80 482.01 L 76.52 475 L 80.01 476.76 L 83.52 475.02 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 173.25 473.58 L 171.64 473.58 Q 170.02 473.58 170.02 483.58 L 170.02 552.98 Q 170.02 562.98 160.02 562.98 L 77.51 562.98 Q 67.51 562.98 67.51 569.8 L 67.5 576.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 67.5 581.88 L 64 574.88 L 67.5 576.63 L 71 574.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 220.75 498.62 L 220.75 546.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 220.75 551.88 L 217.25 544.88 L 220.75 546.63 L 224.25 544.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="173.25" y="448.62" width="95" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 93px; height: 1px; padding-top: 474px; margin-left: 174px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                普通の
+                                <br/>
+                                スイッチ
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="221" y="477" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    普通の
+スイッチ
+                </text>
+            </switch>
+        </g>
+        <path d="M 64.17 635.9 L 64.2 652.98 Q 64.21 662.98 74.21 662.98 L 138.63 663" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 143.88 663 L 136.88 666.5 L 138.63 663 L 136.88 659.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 262.5 662.98 L 266.26 662.98 Q 270.02 662.98 270.02 657 L 270.02 654.01 Q 270.02 651.02 280.02 651.02 L 303.63 651.02" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 308.88 651.02 L 301.88 654.52 L 303.63 651.02 L 301.88 647.52 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="145" y="633" width="117.5" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 116px; height: 1px; padding-top: 663px; margin-left: 146px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                ChromeBook
+                                <br/>
+                                (音ゲー＆鯖いじり)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="204" y="667" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ChromeBook...
+                </text>
+            </switch>
+        </g>
+        <rect x="355.75" y="230.5" width="111" height="55" rx="8.25" ry="8.25" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 109px; height: 1px; padding-top: 258px; margin-left: 357px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font color="#000000">
+                                    raspberry pi 3B
+                                    <br/>
+                                    (1GB,SD)
+                                    <br/>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="411" y="262" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    raspberry pi 3B...
+                </text>
+            </switch>
+        </g>
+        <rect x="355.25" y="90.5" width="110" height="60" rx="9" ry="9" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 121px; margin-left: 356px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font color="#000000">
+                                    raspberry pi 4B
+                                    <br/>
+                                    (4GB Model)
+                                    <br/>
+                                    (SSD)
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="410" y="124" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    raspberry pi 4B...
+                </text>
+            </switch>
+        </g>
+        <rect x="355.75" y="158.25" width="110" height="60" rx="9" ry="9" fill="#fad9d5" stroke="#ae4132" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 188px; margin-left: 357px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <font color="#000000">
+                                    raspberry pi 3B+
+                                    <br/>
+                                    (1GB,SD)
+                                    <br/>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="411" y="192" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    raspberry pi 3B+...
+                </text>
+            </switch>
+        </g>
+        <rect x="490.75" y="168" width="140" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 193px; margin-left: 492px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                NFS鯖
+                                <br/>
+                                （PVC用）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="561" y="197" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    NFS鯖...
+                </text>
+            </switch>
+        </g>
+        <rect x="10" y="483.13" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 513px; margin-left: 11px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                家族用PC
+                                <br/>
+                                （と称されたVMホスト、NAS鯖）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="80" y="517" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    家族用PC...
+                </text>
+            </switch>
+        </g>
+        <rect x="375" y="527.5" width="110" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 553px; margin-left: 376px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                VPN鯖
+                                <br/>
+                                （けしからんやつ）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="430" y="556" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    VPN鯖...
+                </text>
+            </switch>
+        </g>
+        <path d="M 399.82 653.69 L 420.02 653.71 Q 430.02 653.72 430.02 643.72 L 430 583.87" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 430 578.62 L 433.5 585.62 L 430 583.87 L 426.5 585.62 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="310" y="628" width="90" height="45" rx="6.75" ry="6.75" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 88px; height: 1px; padding-top: 651px; margin-left: 311px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                鯖メンテ用
+                                <br/>
+                                VPN
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="355" y="654" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    鯖メンテ用
+VPN
+                </text>
+            </switch>
+        </g>
+        <path d="M 260.75 582.98 L 265.39 582.98 Q 270.02 582.98 270.02 592.98 L 270.02 641.02 Q 270.02 651.02 280.02 651.02 L 303.63 651.02" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 308.88 651.02 L 301.88 654.52 L 303.63 651.02 L 301.88 647.52 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="180.75" y="553" width="80" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 583px; margin-left: 182px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                メイン機
+                                <br/>
+                                （自作）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="221" y="587" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    メイン機
+（自作）
+                </text>
+            </switch>
+        </g>
+        <rect x="20" y="583" width="95" height="50" rx="7.5" ry="7.5" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 93px; height: 1px; padding-top: 608px; margin-left: 21px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                自室水牛AP
+                                <br/>
+                                （Wifiのみ用）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="68" y="612" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    自室水牛AP...
+                </text>
+            </switch>
+        </g>
+        <rect x="10" y="673" width="140" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="#000000" font-family="Helvetica" clip-path="url(#mx-clip-14-673-132-30-0)" font-size="12px">
+            <text x="15.5" y="692.5">
+                個人用回線（v6プラス）
+            </text>
+        </g>
+        <rect x="490.75" y="95.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 126px; margin-left: 492px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                ロギング・プロキシ鯖
+                                <br/>
+                                （ﾝｷﾞｯｯｯｸｽ!)
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="561" y="129" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ロギング・プロキシ鯖
+（ﾝｷﾞｯｯｯｸｽ!)
+                </text>
+            </switch>
+        </g>
+        <rect x="490.75" y="225.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 256px; margin-left: 492px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                コントローラーノード
+                                <br/>
+                                （冗長化したい…）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="561" y="259" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    コントローラーノード
+（冗長化したい…）
+                </text>
+            </switch>
+        </g>
+        <rect x="375" y="455.5" width="140" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 486px; margin-left: 376px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                ワーカーノード*3
+                                <br/>
+                                （筐体増やしたい）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="445" y="489" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ワーカーノード*3...
+                </text>
+            </switch>
+        </g>
+        <rect x="375" y="385.5" width="170" height="60" rx="9" ry="9" fill="#2a2a2a" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 416px; margin-left: 376px;">
+                        <div data-drawio-colors="color: #F0F0F0; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(240, 240, 240); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                TrueNAS
+                                <br/>
+                                （バックアップ・個人利用）
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="460" y="419" fill="#F0F0F0" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    TrueNAS...
+                </text>
+            </switch>
+        </g>
+        <path d="M 275 205.5 L 320.02 205.49 Q 330.02 205.49 330.02 215.49 L 330.02 403.72 Q 330.02 413.72 338.59 413.71 L 347.16 413.71" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 352.41 413.7 L 345.42 417.21 L 347.16 413.71 L 345.41 410.21 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="585" y="325.5" width="100" height="200" rx="15" ry="15" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 426px; margin-left: 586px;">
+                        <div data-drawio-colors="color: #333333; " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(51, 51, 51); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                使ってる
+                                <br/>
+                                セグメント
+                                <br/>
+                                <br/>
+                                個人用
+                                <br/>
+                                管理用
+                                <br/>
+                                VM用
+                                <br/>
+                                k8sクラスタ用
+                                <br/>
+                                <br/>
+                                &lt;&lt;BGP内&gt;&gt;
+                                <br/>
+                                Pod用
+                                <br/>
+                                LB用
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="635" y="429" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    使ってるセグメント個人用管理用VM用...
+                </text>
+            </switch>
+        </g>
+        <rect x="585" y="547.5" width="100" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g fill="#000000" font-family="Helvetica" clip-path="url(#mx-clip-589-548-92-30-0)" font-size="12px">
+            <text x="590.5" y="560">
+                鯖用回線
+            </text>
+            <text x="590.5" y="574">
+                （PPPoE+IPoE）
+            </text>
+        </g>
+        <path d="M 80.63 40 C 22.13 40 7.5 80 54.3 88 C 7.5 105.6 60.15 144 98.17 128 C 124.5 160 212.25 160 241.5 128 C 300 128 300 96 263.44 80 C 300 48 241.5 16 190.31 32 C 153.75 8 95.25 8 80.63 40 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 291px; height: 1px; padding-top: 80px; margin-left: 9px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                Grafana Cloud（無料枠）
+                                <br/>
+                                <br/>
+                                nginxログ解析
+                                <br/>
+                                k8sモニタリング
+                                <br/>
+                                Web生きてるか確認
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="154" y="84" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Grafana Cloud（無料枠）...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
