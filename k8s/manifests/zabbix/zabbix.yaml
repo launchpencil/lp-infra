@@ -23,7 +23,7 @@ spec:
           mountPath: /var/lib/zabbix/mibs
         env:
           - name: DB_SERVER_HOST
-            value: "database1-0.database1.infra-backend.svc.cluster.local"
+            value: "192.168.0.3"
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
@@ -44,7 +44,7 @@ spec:
         image: zabbix/zabbix-web-nginx-mysql
         env:
           - name: DB_SERVER_HOST
-            value: "database1-0.database1.infra-backend.svc.cluster.local"
+            value: "192.168.0.3"
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:

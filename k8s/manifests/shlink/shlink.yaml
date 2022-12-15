@@ -32,4 +32,4 @@ spec:
                 name: shlink
                 key: dbpass
           - name: DB_HOST
-            value: "database1-0.database1.infra-backend.svc.cluster.local"
+            value: "192.168.0.3"
