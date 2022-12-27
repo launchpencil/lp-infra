@@ -28,7 +28,14 @@ spec:
             value: "nextcloud"
           - name: MYSQL_HOST
             value: "192.168.0.3"
+          - name: NEXTCLOUD_ADMIN_USER
+            value: "admin"
           - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: nextcloud
+                key: pass
+          - name: NEXTCLOUD_ADMIN_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: nextcloud
