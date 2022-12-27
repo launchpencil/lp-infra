@@ -30,6 +30,8 @@ spec:
             value: "192.168.0.3"
           - name: NEXTCLOUD_ADMIN_USER
             value: "admin"
+          - name: NEXTCLOUD_TRUSTED_DOMAINS
+            value: "cloud.launchpencil.f5.si"
           - name: MYSQL_PASSWORD
             valueFrom:
               secretKeyRef:
