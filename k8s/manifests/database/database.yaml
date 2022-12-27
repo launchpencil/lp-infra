@@ -39,6 +39,7 @@ spec:
   - metadata:
       name: database1
     spec:
+      storageClassName: ssd-client
       accessModes:
       - ReadWriteOnce
       resources:
