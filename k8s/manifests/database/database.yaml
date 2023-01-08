@@ -39,7 +39,7 @@ spec:
   - metadata:
       name: database1
     spec:
-      storageClassName: ssd-client
+      storageClassName: synology-iscsi-storage
       accessModes:
       - ReadWriteOnce
       resources:
