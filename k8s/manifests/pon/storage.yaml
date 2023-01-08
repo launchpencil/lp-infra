@@ -12,8 +12,8 @@ spec:
   capacity:
     storage: 5Gi
   nfs:
-    server: 192.168.0.2
-    path: /mnt/hdd/k8s/nfs/pon
+    server: 192.168.0.21
+    path: /volume1/k8s/pon
   persistentVolumeReclaimPolicy: Delete
 
 ---
