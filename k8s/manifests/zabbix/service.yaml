@@ -22,9 +22,5 @@ spec:
   - name: proxy
     port: 10051
     targetPort: 10051
-  - name: proxy-udp
-    port: 10051
-    targetPort: 10051
-    protocol: UDP
   selector:
     app: zabbix-server
