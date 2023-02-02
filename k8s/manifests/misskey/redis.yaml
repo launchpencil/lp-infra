@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: misskey-redis
+spec:
+  selector:
+    matchLabels:
+      app: misskey-db
+  serviceName: "misskey-redis"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: misskey-db
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        volumeMounts:
+        - name: redis
+          mountPath: /data
+  volumeClaimTemplates:
+  - metadata:
+      name: redis
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 10Gi

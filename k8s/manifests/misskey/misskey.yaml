@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: misskey
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: misskey
+  template:
+    metadata:
+      labels:
+        app: misskey
+    spec:
+      containers:
+      - name: misskey
+        image: misskey/misskey
+        volumeMounts:
+          - name: default
+            mountPath: /misskey/.config/
+            readOnly: true
+      volumes:
+      - name: misskey
+        configMap:
+          name: misskey
+          items:
+          - key: default.yml
+            path: default.yml
