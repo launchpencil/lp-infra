@@ -17,7 +17,7 @@ spec:
         image: misskey/misskey
         volumeMounts:
           - name: misskey
-            mountPath: /misskey/.config/
+            mountPath: /misskey/.config
             readOnly: true
       volumes:
       - name: misskey
