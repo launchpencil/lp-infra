@@ -16,6 +16,17 @@ spec:
       containers:
       - name: postgres
         image: postgres:15-alpine
+        env:
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: misskey
+                key: dbpass
+          - name: POSTGRES_USER
+            valueFrom:
+              secretKeyRef:
+                name: misskey
+                key: dbname
         volumeMounts:
         - name: postgres
           mountPath: /var/lib/postgresql/data
