@@ -25,3 +25,19 @@ spec:
     port: 5432
   selector:
     app: misskey-postgres
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: misskey
+spec:
+  type: ClusterIP
+  ports:
+  - name: "misskey"
+    protocol: "TCP"
+    port: 80
+    targetport: 3000
+  selector:
+    app: misskey
