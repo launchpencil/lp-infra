@@ -1,15 +1,27 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: misskey-db
+  name: misskey-redis
 spec:
   type: ClusterIP
   ports:
   - name: "redis"
     protocol: "TCP"
     port: 6379
+  selector:
+    app: misskey-redis
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: misskey-postgres
+spec:
+  type: ClusterIP
+  ports:
   - name: "postgres"
     protocol: "TCP"
     port: 5432
   selector:
-    app: misskey-db
+    app: misskey-postgres
