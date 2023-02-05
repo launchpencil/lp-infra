@@ -21,8 +21,6 @@ data:
       service: https://192.168.0.1:9090
       originRequest:
           noTLSVerify: true
-    - hostname: nas.launchpencil.site
-      service: http://192.168.0.2
     - hostname: esxi.launchpencil.site
       service: https://192.168.101.1
       originRequest:
@@ -36,9 +34,7 @@ data:
       originRequest:
           noTLSVerify: true
     - hostname: db.launchpencil.site
-      service: http://database1.infra-backend
-    - hostname: grafana.launchpencil.site
-      service: http://grafana.monitoring:3000
+      service: http://database-web.infra-backend
     - service: http_status:404
     warp-routing:
         enabled: true
