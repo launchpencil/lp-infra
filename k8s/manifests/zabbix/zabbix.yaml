@@ -42,6 +42,8 @@ spec:
             value: "1"
           - name: ZBX_CACHESIZE
             value: "32M"
+          - name: ZBX_STARTPOLLERS
+            value: "30"
       - name: zabbix-web
         image: zabbix/zabbix-web-nginx-mysql
         env:
