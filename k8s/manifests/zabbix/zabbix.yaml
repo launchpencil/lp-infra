@@ -41,7 +41,7 @@ spec:
           - name: ZBX_ALLOWUNSUPPORTEDDBVERSIONS
             value: "1"
           - name: ZBX_CACHESIZE
-            value: "32M"
+            value: "128M"
           - name: ZBX_STARTPOLLERS
             value: "30"
       - name: zabbix-web
