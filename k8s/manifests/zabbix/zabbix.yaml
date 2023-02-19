@@ -40,6 +40,8 @@ spec:
             value: "true"
           - name: ZBX_ALLOWUNSUPPORTEDDBVERSIONS
             value: "1"
+          - name: ZBX_CACHESIZE
+            value: "32M"
       - name: zabbix-web
         image: zabbix/zabbix-web-nginx-mysql
         env:
