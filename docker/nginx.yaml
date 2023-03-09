@@ -1,0 +1,7 @@
+version: "3"
+services:
+  nginx:
+    image: core.harbor.launchpencil.f5.si/k8s/nginx02
+    container_name: nginx02
+    ports:
+      - "80:80"
