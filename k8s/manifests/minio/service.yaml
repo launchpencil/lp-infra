@@ -10,5 +10,9 @@ spec:
     protocol: "TCP"
     port: 80
     targetPort: 9090
+  - name: "minio-api"
+    protocol: "TCP"
+    port: 9000
+    targetPort: 9000
   selector:
     app: minio
