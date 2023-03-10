@@ -44,21 +44,21 @@ spec:
   dnsNames:
   - cloud.launchpencil.f5.si
 
-#---
-#
-#apiVersion: cert-manager.io/v1
-#kind: Certificate
-#metadata:
-#  name: registry
-#  namespace: infra-backend
-#spec:
-#  secretName: registry-tls
-#  issuerRef:
-#    name: letsencrypt
-#    kind: ClusterIssuer
-#  commonName: registry.launchpencil.f5.si
-#  dnsNames:
-#  - registry.launchpencil.f5.si
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: minio
+  namespace: infra-backend
+spec:
+  secretName: minio-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: minio.launchpencil.f5.si
+  dnsNames:
+  - minio.launchpencil.f5.si
   
 ---
 

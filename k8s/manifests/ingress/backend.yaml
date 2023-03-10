@@ -3,25 +3,28 @@ kind: Ingress
 metadata:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-  name: registry
+    nginx.ingress.kubernetes.io/server-snippet: |-
+      client_max_body_size 100G;
+      server_tokens off;
+  name: minio
   namespace: infra-backend
 spec:
   ingressClassName: nginx
   rules:
-  - host: registry.launchpencil.f5.si
+  - host: minio.launchpencil.f5.si
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: docker-registry
+            name: minio
             port:
-              number: 80
+              number: 9000
   tls:
   - hosts:
-    - registry.launchpencil.f5.si
-    secretName: registry-tls
+    - minio.launchpencil.f5.si
+    secretName: minio-tls
 
 ---
 
