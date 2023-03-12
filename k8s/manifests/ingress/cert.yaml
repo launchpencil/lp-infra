@@ -165,3 +165,18 @@ spec:
   commonName: misskey.launchpencil.f5.si
   dnsNames:
   - misskey.launchpencil.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app
+spec:
+  secretName: app-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: app.zikanwari.f5.si
+  dnsNames:
+  - app.zikanwari.f5.si
