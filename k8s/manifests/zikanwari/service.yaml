@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: zikanwari
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - name: "http-port"
     protocol: "TCP"
@@ -19,7 +19,7 @@ kind: Service
 metadata:
   name: zikanwari-line
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - name: "http-port"
     protocol: "TCP"
@@ -27,3 +27,19 @@ spec:
     targetPort: 3000
   selector:
     app: zikanwari-line
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zikanwari-app
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: zikanwari-app

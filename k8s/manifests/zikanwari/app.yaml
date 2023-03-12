@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zikanwari-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zikanwari-app
+  template:
+    metadata:
+      labels:
+        app: zikanwari-app
+    spec:
+      containers:
+      - name: zikanwari-app
+        image: ghcr.io/launchpencil/zikanwari:app
