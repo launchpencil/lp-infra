@@ -90,6 +90,16 @@ spec:
             name: zikanwari-app
             port:
               number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /zikanwari
+        pathType: Prefix
+        backend:
+          service:
+            name: zikanwari-api
+            port:
+              number: 80
   tls:
   - hosts:
     - launchpencil.f5.si
@@ -115,3 +125,6 @@ spec:
   - hosts:
     - app.zikanwari.f5.si
     secretName: app-tls
+  - hosts:
+    - api.launchpencil.f5.si
+    secretName: api-tls

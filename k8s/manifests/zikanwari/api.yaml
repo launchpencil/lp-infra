@@ -1,0 +1,18 @@
+apiVersion: apis/v1
+kind: Deployment
+metadata:
+  name: zikanwari-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      api: zikanwari-api
+  template:
+    metadata:
+      labels:
+        api: zikanwari-api
+    spec:
+      containers:
+      - name: zikanwari-api
+        image: ghcr.io/launchpencil/zikanwari:api
+        imagePullPolicy: Always

@@ -180,3 +180,18 @@ spec:
   commonName: app.zikanwari.f5.si
   dnsNames:
   - app.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api
+spec:
+  secretName: api-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: api.launchpencil.f5.si
+  dnsNames:
+  - app.launchpencil.f5.si
