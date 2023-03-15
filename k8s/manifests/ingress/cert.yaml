@@ -194,4 +194,4 @@ spec:
     kind: ClusterIssuer
   commonName: api.launchpencil.f5.si
   dnsNames:
-  - app.launchpencil.f5.si
+  - api.launchpencil.f5.si
