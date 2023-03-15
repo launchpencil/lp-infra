@@ -1,9 +1,9 @@
-apiVersion: apis/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: zikanwari-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       api: zikanwari-api
