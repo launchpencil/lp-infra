@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: zikanwari-api
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       api: zikanwari-api
