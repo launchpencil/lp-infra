@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: database1-web
+  name: phpmyadmin
   namespace: infra-backend
 spec:
   type: LoadBalancer
@@ -26,4 +26,4 @@ spec:
     protocol: "TCP"
     port: 80
   selector:
-    app: database-web
+    app: phpmyadmin
