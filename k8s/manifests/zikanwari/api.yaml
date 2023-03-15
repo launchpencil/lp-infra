@@ -16,3 +16,6 @@ spec:
       - name: zikanwari-api
         image: ghcr.io/launchpencil/zikanwari:api
         imagePullPolicy: Always
+        env:
+          - name: DB
+            value: "192.168.0.3"
