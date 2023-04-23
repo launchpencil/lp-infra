@@ -56,6 +56,6 @@ spec:
   - name: "http-port"
     protocol: "TCP"
     port: 80
-    targetPort: 80
+    targetPort: 3000
   selector:
     app: zikanwari-api
