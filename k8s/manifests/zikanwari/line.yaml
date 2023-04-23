@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zikanwari-line
-        image: ghcr.io/launchpencil/zikanwari:line
+        image: ghcr.io/zikanwari/zikanwari:line
         imagePullPolicy: Always
         env:
           - name: LINE_ACCESS_TOKEN

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zikanwari-web
-        image: ghcr.io/launchpencil/zikanwari:web
+        image: ghcr.io/zikanwari/zikanwari:web
         imagePullPolicy: Always
         env:
           - name: DB
@@ -30,7 +30,7 @@ spec:
                 name: zikanwari
                 key: pass
       - name: zikanwari-bot
-        image: ghcr.io/launchpencil/zikanwari:bot
+        image: ghcr.io/zikanwari/zikanwari:bot
         imagePullPolicy: Always
         env:
           - name: TOKEN

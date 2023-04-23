@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: zikanwari-api
-        image: ghcr.io/launchpencil/zikanwari:api
+        image: ghcr.io/zikanwari/zikanwari:api
         imagePullPolicy: Always
         env:
           - name: DB
