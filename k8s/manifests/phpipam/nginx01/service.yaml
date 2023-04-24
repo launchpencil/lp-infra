@@ -4,7 +4,7 @@ metadata:
   name: phpipam
   namespace: infra-backend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: "http-port"
     protocol: "TCP"
