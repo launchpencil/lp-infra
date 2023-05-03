@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
            - name: dbupdater
-             image: core.harbor.launchpencil.f5.si/k8s/dbupdate
+             image: ghcr.io/launchpencil/todo:updater
              env:
                - name: MYSQL_USER
                  valueFrom:
@@ -22,6 +22,4 @@ spec:
                    secretKeyRef:
                      name: zikanwari
                      key: pass
-          imagePullSecrets:
-          - name: registry-harbor
           restartPolicy: OnFailure
