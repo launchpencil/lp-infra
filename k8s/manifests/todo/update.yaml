@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: todo-update
+spec:
+  schedule: "0 2 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+           - name: dbupdater
+             image: core.harbor.launchpencil.f5.si/k8s/dbupdate
+             env:
+               - name: MYSQL_USER
+                 valueFrom:
+                   secretKeyRef:
+                     name: zikanwari
+                     key: user
+               - name: MYSQL_PASSWORD
+                 valueFrom:
+                   secretKeyRef:
+                     name: zikanwari
+                     key: pass
+          imagePullSecrets:
+          - name: registry-harbor
+          restartPolicy: OnFailure
