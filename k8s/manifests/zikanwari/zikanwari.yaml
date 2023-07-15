@@ -29,12 +29,3 @@ spec:
               secretKeyRef:
                 name: zikanwari
                 key: pass
-      - name: zikanwari-bot
-        image: ghcr.io/zikanwari/zikanwari:bot
-        imagePullPolicy: Always
-        env:
-          - name: TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: token

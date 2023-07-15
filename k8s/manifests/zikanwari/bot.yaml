@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zikanwari-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zikanwari-bot
+  template:
+    metadata:
+      labels:
+        app: zikanwari-bot
+    spec:
+      containers:
+      - name: zikanwari-bot
+        image: ghcr.io/zikanwari/zikanwari:bot
+        imagePullPolicy: Always
+        env:
+          - name: TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: token
