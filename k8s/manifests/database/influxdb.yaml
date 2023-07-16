@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: database-influxdb
+spec:
+  serviceName: database-influxdb
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database-influxdb
+  template:
+    metadata:
+      labels:
+        app: database-influxdb
+    spec:
+      containers:
+      - name: database-influxdb
+        image: influxdb
+        volumeMounts:
+        - name: database-influxdb
+          mountPath: /var/lib/influxdb2
+  volumeClaimTemplates:
+  - metadata:
+      name: database-influxdb
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 10Gi
