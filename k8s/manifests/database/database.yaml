@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: database1
-        image: mariadb:10.8
+        image: mariadb
         env:
           - name: MARIADB_ROOT_PASSWORD
             valueFrom:
@@ -26,15 +26,6 @@ spec:
         volumeMounts:
         - name: database1
           mountPath: /var/lib/mysql/
-        - name: conf
-          mountPath: /etc/mysql/conf.d/
-      volumes:
-        - name: conf
-          configMap:
-            name: dbconfig
-            items:
-            - key: rescue.cnf
-              path: rescue.cnf
   volumeClaimTemplates:
   - metadata:
       name: database1
