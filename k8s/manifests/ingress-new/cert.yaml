@@ -1,0 +1,58 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zikanwari
+  namespace: default
+spec:
+  secretName: zikanwari-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: zikanwari.f5.si
+  dnsNames:
+  - zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: line
+spec:
+  secretName: line-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: line.zikanwari.f5.si
+  dnsNames:
+  - line.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app
+spec:
+  secretName: app-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: app.zikanwari.f5.si
+  dnsNames:
+  - app.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api
+spec:
+  secretName: api-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: api.launchpencil.f5.si
+  dnsNames:
+  - api.launchpencil.f5.si
