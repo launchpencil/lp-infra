@@ -36,7 +36,6 @@ spec:
   - metadata:
       name: postgres
     spec:
-      storageClassName: nfs-client
       accessModes:
       - ReadWriteOnce
       resources:

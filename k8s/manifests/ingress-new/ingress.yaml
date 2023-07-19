@@ -51,6 +51,16 @@ spec:
             name: todo-api
             port:
               number: 80
+  - host: misskey.launchpencil.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: misskey
+            port:
+              number: 80
   tls:
   - hosts:
     - line.zikanwari.f5.si
@@ -61,3 +71,6 @@ spec:
   - hosts:
     - api.launchpencil.f5.si
     secretName: api-tls
+  - hosts:
+    - misskey.launchpencil.f5.si
+    secretName: miisskey-tls
