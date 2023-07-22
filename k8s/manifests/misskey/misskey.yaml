@@ -15,14 +15,14 @@ spec:
       containers:
       - name: misskey
         image: misskey/misskey
-        #volumeMounts:
-        #  - name: misskey
-        #    mountPath: /misskey/.config
-        #    readOnly: true
-      #volumes:
-      #- name: misskey
-      #  configMap:
-      #    name: misskey
-      #    items:
-      #    - key: default.yml
-      #      path: default.yml
+        volumeMounts:
+          - name: misskey
+            mountPath: /misskey/.config
+            readOnly: false
+      volumes:
+      - name: misskey
+        configMap:
+          name: misskey
+          items:
+          - key: default.yml
+            path: default.yml
