@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: waitdisplay-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: waitdisplay-client
+  template:
+    metadata:
+      labels:
+        app: waitdisplay-client
+    spec:
+      containers:
+      - name: waitdisplay-client
+        image: ghcr.io/zikanwari/waitdisplay:client
+        imagePullPolicy: Always

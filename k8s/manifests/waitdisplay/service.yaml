@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: waitdisplay-client
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: waitdisplay-client
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: waitdisplay-server
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: waitdisplay-server
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: waitdisplay-show
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: waitdisplay-show
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zikanwari-api
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 3000
+  selector:
+    app: zikanwari-api

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: waitdisplay-show
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: waitdisplay-show
+  template:
+    metadata:
+      labels:
+        app: waitdisplay-show
+    spec:
+      containers:
+      - name: waitdisplay-show
+        image: ghcr.io/zikanwari/waitdisplay:show
+        imagePullPolicy: Always
