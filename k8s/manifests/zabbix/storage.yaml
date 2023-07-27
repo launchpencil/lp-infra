@@ -9,7 +9,7 @@ spec:
       storage: 8Gi
   accessModes:
   - ReadWriteOnce
-  storageClassName: synology-iscsi-storage
+  storageClassName: synostorage
 
 ---
 
