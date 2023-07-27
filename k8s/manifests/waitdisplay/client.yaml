@@ -16,3 +16,9 @@ spec:
       - name: waitdisplay-client
         image: ghcr.io/zikanwari/waitdisplay:client
         imagePullPolicy: Always
+        env:
+          - name: token
+            valueFrom:
+              secretKeyRef:
+                name: waitdisplay
+                key: token

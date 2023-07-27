@@ -16,3 +16,9 @@ spec:
       - name: waitdisplay-server
         image: ghcr.io/zikanwari/waitdisplay:server
         imagePullPolicy: Always
+        env:
+          - name: token
+            valueFrom:
+              secretKeyRef:
+                name: waitdisplay
+                key: token
