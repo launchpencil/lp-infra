@@ -47,6 +47,21 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
+  name: waitdisplay
+spec:
+  secretName: waitdisplay-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: waitdisplay.zikanwari.f5.si
+  dnsNames:
+  - waitdisplay.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
   name: api
 spec:
   secretName: api-tls

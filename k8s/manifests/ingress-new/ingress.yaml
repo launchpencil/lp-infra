@@ -31,6 +31,26 @@ spec:
             name: zikanwari-app
             port:
               number: 80
+  - host: waitdisplay.zikanwari.f5.si
+    http:
+      paths:
+      - path: /show
+        pathType: Prefix
+        backend:
+          service:
+            name: waitdisplay-show
+            port:
+              number: 80
+  - host: waitdisplay.zikanwari.f5.si
+    http:
+      paths:
+      - path: /client
+        pathType: Prefix
+        backend:
+          service:
+            name: waitdisplay-client
+            port:
+              number: 80
   - host: api.launchpencil.f5.si
     http:
       paths:
@@ -51,6 +71,16 @@ spec:
             name: todo-api
             port:
               number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /waitdisplay
+        pathType: Prefix
+        backend:
+          service:
+            name: waitdisplay-server
+            port:
+              number: 80
   - host: misskey.launchpencil.f5.si
     http:
       paths:
@@ -68,6 +98,9 @@ spec:
   - hosts:
     - app.zikanwari.f5.si
     secretName: app-tls
+  - hosts:
+    - waitdisplay.zikanwari.f5.si
+    secretName: waitdisplay-tls
   - hosts:
     - api.launchpencil.f5.si
     secretName: api-tls
