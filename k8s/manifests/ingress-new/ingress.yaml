@@ -44,7 +44,7 @@ spec:
   - host: waitdisplay.zikanwari.f5.si
     http:
       paths:
-      - path: /client
+      - path: /
         pathType: Prefix
         backend:
           service:
