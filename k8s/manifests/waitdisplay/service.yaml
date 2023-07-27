@@ -43,19 +43,3 @@ spec:
     targetPort: 80
   selector:
     app: waitdisplay-show
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: zikanwari-api
-spec:
-  type: ClusterIP
-  ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 3000
-  selector:
-    app: zikanwari-api
