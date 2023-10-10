@@ -62,6 +62,20 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
+  name: studybattle
+spec:
+  secretName: studybattle-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: studybattle.zikanwari.f5.si
+  dnsNames:
+  - studybattle.zikanwari.f5.si
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
   name: mathattack
 spec:
   secretName: mathattack-tls
