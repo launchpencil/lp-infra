@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
       - name: studybattle-api
-        image: ghcr.io/zikanwari/studybatle:api
+        image: ghcr.io/zikanwari/studybattle:api
         imagePullPolicy: Always
