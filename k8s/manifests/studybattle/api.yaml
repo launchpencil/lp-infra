@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: studybattle-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: studybattle-api
+  template:
+    metadata:
+      labels:
+        app: studybattle-api
+    spec:
+      containers:
+      - name: studybattle-api
+        image: ghcr.io/zikanwari/studybatle:api
+        imagePullPolicy: Always
