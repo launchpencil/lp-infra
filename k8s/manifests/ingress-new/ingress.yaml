@@ -101,14 +101,14 @@ spec:
             name: waitdisplay-server
             port:
               number: 80
-  - host: misskey.launchpencil.f5.si
+  - host: api.launchpencil.f5.si
     http:
       paths:
-      - path: /
+      - path: /studybattle
         pathType: Prefix
         backend:
           service:
-            name: misskey
+            name: studybattle-api
             port:
               number: 80
   - host: test.launchpencil.f5.si
@@ -138,8 +138,8 @@ spec:
     - api.launchpencil.f5.si
     secretName: api-tls
   - hosts:
-    - misskey.launchpencil.f5.si
-    secretName: miisskey-tls
-  - hosts:
     - test.launchpencil.f5.si
     secretName: test-tls
+  - hosts:
+    - studybattle.zikanwari.f5.si
+    secretName: studybattle-tls
