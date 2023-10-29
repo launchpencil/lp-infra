@@ -16,3 +16,14 @@ spec:
       - name: studybattle-api
         image: ghcr.io/zikanwari/studybattle:api
         imagePullPolicy: Always
+        env:
+          - name: user
+            valueFrom:
+              secretKeyRef:
+                name: studybattle
+                key: user
+          - name: pass
+            valueFrom:
+              secretKeyRef:
+                name: studybattle
+                key: pass
