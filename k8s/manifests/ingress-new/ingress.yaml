@@ -120,6 +120,16 @@ spec:
           service:
             name: test
             port:
+              number: 80
+  - host: msky.launchpencil.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: misskey
+            port:
               number: 80  
   tls:
   - hosts:
@@ -143,3 +153,6 @@ spec:
   - hosts:
     - studybattle.zikanwari.f5.si
     secretName: studybattle-tls
+  - hosts:
+    - msky.launchpencil.f5.si
+    secretName: miisskey-tls

@@ -23,6 +23,7 @@ spec:
   - metadata:
       name: redis
     spec:
+      storageClassName: nfs-client
       accessModes:
       - ReadWriteOnce
       resources:

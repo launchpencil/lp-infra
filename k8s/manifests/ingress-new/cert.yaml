@@ -127,6 +127,6 @@ spec:
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
-  commonName: misskey.launchpencil.f5.si
+  commonName: msky.launchpencil.f5.si
   dnsNames:
-  - misskey.launchpencil.f5.si
+  - msky.launchpencil.f5.si
