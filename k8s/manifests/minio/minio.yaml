@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: minio
-  namespace: infra-backend
+  namespace: default
 spec:
   serviceName: minio
   replicas: 1
