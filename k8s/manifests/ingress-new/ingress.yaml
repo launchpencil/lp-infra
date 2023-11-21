@@ -111,6 +111,16 @@ spec:
             name: studybattle-api
             port:
               number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /minio
+        pathType: Prefix
+        backend:
+          service:
+            name: minio
+            port:
+              number: 9000
   - host: test.launchpencil.f5.si
     http:
       paths:
