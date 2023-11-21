@@ -119,8 +119,8 @@ spec:
         backend:
           service:
             name: minio
-            port:
-              number: 9000
+            port: 
+              number: 80
   - host: test.launchpencil.f5.si
     http:
       paths:
