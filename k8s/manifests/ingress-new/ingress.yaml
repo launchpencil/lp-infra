@@ -6,6 +6,9 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/server-snippet: |-
+      client_max_body_size 100G;
+      server_tokens off;
   name: nginx01
   namespace: default
 spec:
