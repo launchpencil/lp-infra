@@ -29,6 +29,7 @@ spec:
   - metadata:
       name: minio
     spec:
+      storageClassName: nfs-client
       accessModes:
       - ReadWriteOnce
       resources:
