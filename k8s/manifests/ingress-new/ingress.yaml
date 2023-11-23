@@ -120,7 +120,7 @@ spec:
           service:
             name: minio
             port: 
-              number: 80
+              number: 9000
   - host: test.launchpencil.f5.si
     http:
       paths:
