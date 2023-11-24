@@ -117,7 +117,7 @@ spec:
   - host: api.launchpencil.f5.si
     http:
       paths:
-      - path: /misskey
+      - path: /s3
         pathType: Prefix
         backend:
           service:
