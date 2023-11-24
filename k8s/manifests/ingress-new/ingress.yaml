@@ -117,7 +117,7 @@ spec:
   - host: api.launchpencil.f5.si
     http:
       paths:
-      - path: /minio
+      - path: /misskey
         pathType: Prefix
         backend:
           service:
