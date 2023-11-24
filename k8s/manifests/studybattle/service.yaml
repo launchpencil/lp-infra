@@ -11,3 +11,19 @@ spec:
     targetPort: 3000
   selector:
     app: studybattle-api
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: studybattle-client
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: studybattle-client
