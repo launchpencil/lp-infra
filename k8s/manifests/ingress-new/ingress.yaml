@@ -114,10 +114,10 @@ spec:
             name: studybattle-api
             port:
               number: 80
-  - host: api.launchpencil.f5.si
+  - host: minio.launchpencil.f5.si
     http:
       paths:
-      - path: /minios3
+      - path: /
         pathType: Prefix
         backend:
           service:
@@ -169,3 +169,6 @@ spec:
   - hosts:
     - msky.launchpencil.f5.si
     secretName: miisskey-tls
+  - hosts:
+    - minio.launchpencil.f5.si
+    secretName: minio-tls

@@ -130,3 +130,18 @@ spec:
   commonName: msky.launchpencil.f5.si
   dnsNames:
   - msky.launchpencil.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: minio
+spec:
+  secretName: minio-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: minio.launchpencil.f5.si
+  dnsNames:
+  - minio.launchpencil.f5.si
