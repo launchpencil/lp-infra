@@ -44,7 +44,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: studybattle-app
+            name: studybattle-client
             port:
               number: 80
   - host: waitdisplay.zikanwari.f5.si
