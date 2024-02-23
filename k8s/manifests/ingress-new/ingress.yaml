@@ -127,6 +127,16 @@ spec:
             name: minio
             port: 
               number: 9000
+  - host: minio.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: minio
+            port: 
+              number: 9000
   - host: test.launchpencil.f5.si
     http:
       paths:
@@ -145,6 +155,16 @@ spec:
         backend:
           service:
             name: misskey
+            port:
+              number: 80
+  - host: qrdrop.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: qrdrop
             port:
               number: 80  
   tls:
@@ -175,3 +195,9 @@ spec:
   - hosts:
     - minio.launchpencil.f5.si
     secretName: minio-tls
+  - hosts:
+    - minio.zikanwari.f5.si
+    secretName: minio-zikan-tls
+  - hosts:
+    - qrdrop.zikanwari.f5.si
+    secretName: qrdrop-tls

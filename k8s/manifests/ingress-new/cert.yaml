@@ -71,6 +71,7 @@ spec:
   commonName: studybattle.zikanwari.f5.si
   dnsNames:
   - studybattle.zikanwari.f5.si
+
 ---
 
 apiVersion: cert-manager.io/v1
@@ -145,3 +146,35 @@ spec:
   commonName: minio.launchpencil.f5.si
   dnsNames:
   - minio.launchpencil.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: minio-zikan
+spec:
+  secretName: minio-zikan-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: minio.zikanwari.f5.si
+  dnsNames:
+  - minio.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: qrdrop
+spec:
+  secretName: qrdrop-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: qrdrop.zikanwari.f5.si
+  dnsNames:
+  - qrdrop.zikanwari.f5.si
+
+---
