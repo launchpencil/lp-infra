@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: phpipam
-  namespace: infra-backend
 spec:
   replicas: 1
   selector:
