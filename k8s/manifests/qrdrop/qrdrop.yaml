@@ -16,3 +16,14 @@ spec:
       - name: qrdrop
         image: ghcr.io/zikanwari/qrdrop
         imagePullPolicy: Always
+        env:
+          - name: accesskey
+            valueFrom:
+              secretKeyRef:
+                name: qrdrop
+                key: akey
+          - name: secretkey
+            valueFrom:
+              secretKeyRef:
+                name: qrdrop
+                key: skey
