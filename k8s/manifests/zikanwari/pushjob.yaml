@@ -1,0 +1,14 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: kadai-push
+spec:
+  schedule: "0 20 * * 0-4" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-container
+            image: ghcr.io/zikanwari/zikanwari:push
+          restartPolicy: OnFailure 
