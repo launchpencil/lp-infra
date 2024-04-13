@@ -14,22 +14,22 @@ spec:
             env:
             - name: publickey
               valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: publickey
+                secretKeyRef:
+                  name: zikanwari
+                  key: publickey
             - name: privatekey
               valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: privatekey
+                secretKeyRef:
+                  name: zikanwari
+                  key: privatekey
             - name: user
               valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: user
+                secretKeyRef:
+                  name: zikanwari
+                  key: user
             - name: pass
               valueFrom:
-              secretKeyRef:
-                name: zikanwari
-                key: pass
+                secretKeyRef:
+                  name: zikanwari
+                  key: pass
           restartPolicy: OnFailure 
