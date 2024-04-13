@@ -1,4 +1,4 @@
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: kadai-push
@@ -9,6 +9,6 @@ spec:
       template:
         spec:
           containers:
-          - name: my-container
+          - name: zikan-push-job
             image: ghcr.io/zikanwari/zikanwari:push
           restartPolicy: OnFailure 
