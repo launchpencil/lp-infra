@@ -11,4 +11,25 @@ spec:
           containers:
           - name: zikan-push-job
             image: ghcr.io/zikanwari/zikanwari:push
+            env:
+            - name: publickey
+              valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: publickey
+            - name: privatekey
+              valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: privatekey
+            - name: user
+              valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: user
+            - name: pass
+              valueFrom:
+              secretKeyRef:
+                name: zikanwari
+                key: pass
           restartPolicy: OnFailure 
