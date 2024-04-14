@@ -33,7 +33,7 @@ spec:
                   name: zikanwari
                   key: pass
           - name: nikka-push-job
-            image: ghcr.io/zikanwari/zikanwari:kadai_push
+            image: ghcr.io/zikanwari/zikanwari:nikka_push
             env:
             - name: publickey
               valueFrom:
