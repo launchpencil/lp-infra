@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: kadai-push
+  name: night-push
 spec:
   schedule: "0 11 * * 0-4" 
   jobTemplate:
@@ -9,8 +9,31 @@ spec:
       template:
         spec:
           containers:
-          - name: zikan-push-job
-            image: ghcr.io/zikanwari/zikanwari:push
+          - name: kadai-push-job
+            image: ghcr.io/zikanwari/zikanwari:kadai_push
+            env:
+            - name: publickey
+              valueFrom:
+                secretKeyRef:
+                  name: zikanwari
+                  key: publickey
+            - name: privatekey
+              valueFrom:
+                secretKeyRef:
+                  name: zikanwari
+                  key: privatekey
+            - name: user
+              valueFrom:
+                secretKeyRef:
+                  name: zikanwari
+                  key: user
+            - name: pass
+              valueFrom:
+                secretKeyRef:
+                  name: zikanwari
+                  key: pass
+          - name: nikka-push-job
+            image: ghcr.io/zikanwari/zikanwari:kadai_push
             env:
             - name: publickey
               valueFrom:
