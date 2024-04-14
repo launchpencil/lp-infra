@@ -11,6 +11,7 @@ spec:
           containers:
           - name: kadai-push-job
             image: ghcr.io/zikanwari/zikanwari:kadai_push
+            imagePullPolicy: Always
             env:
             - name: publickey
               valueFrom:
@@ -34,6 +35,7 @@ spec:
                   key: pass
           - name: nikka-push-job
             image: ghcr.io/zikanwari/zikanwari:nikka_push
+            imagePullPolicy: Always
             env:
             - name: publickey
               valueFrom:
