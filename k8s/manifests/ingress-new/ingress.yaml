@@ -117,6 +117,16 @@ spec:
             name: studybattle-api
             port:
               number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /factorization
+        pathType: Prefix
+        backend:
+          service:
+            name: factorization-api
+            port:
+              number: 80
   - host: minio.launchpencil.f5.si
     http:
       paths:

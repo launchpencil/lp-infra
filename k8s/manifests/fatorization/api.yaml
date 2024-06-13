@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: factorization-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorization-api
+  template:
+    metadata:
+      labels:
+        app: factorization-api
+    spec:
+      containers:
+      - name: factorization-api
+        image: ghcr.io/launchpencil/factorization-api
