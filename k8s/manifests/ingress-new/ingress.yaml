@@ -77,6 +77,16 @@ spec:
             name: mathattack
             port:
               number: 80
+  - host: roulette.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: roulette
+            port:
+              number: 80
   - host: api.launchpencil.f5.si
     http:
       paths:
@@ -211,3 +221,6 @@ spec:
   - hosts:
     - qrdrop.zikanwari.f5.si
     secretName: qrdrop-tls
+  - hosts:
+    - roulette.zikanwari.f5.si
+    secretName: roulette-tls
