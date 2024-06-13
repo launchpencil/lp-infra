@@ -15,3 +15,14 @@ spec:
       containers:
       - name: factorization-api
         image: ghcr.io/launchpencil/factorization-api
+        env:
+            - name: user
+              valueFrom:
+                secretKeyRef:
+                  name: factorization
+                  key: user
+            - name: pass
+              valueFrom:
+                secretKeyRef:
+                  name: factorization
+                  key: pass
