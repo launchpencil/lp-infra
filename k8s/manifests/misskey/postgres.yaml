@@ -36,9 +36,5 @@ spec:
   - metadata:
       name: postgres
     spec:
-      storageClassName: nfs-client
-      accessModes:
-      - ReadWriteOnce
-      resources:
-        requests:
-          storage: 10Gi
+      persistentVolumeClaim:
+          claimName: postgress-pvc

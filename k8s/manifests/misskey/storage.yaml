@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgress-pv
+  labels:
+    app: postgress
+spec:
+  storageClassName: postgress-stg
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  capacity:
+    storage: 5Gi
+  nfs:
+    server: 192.168.0.21
+    path: /volume2/k8s/postgress
+  persistentVolumeReclaimPolicy: Delete
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgress-pvc
+  labels:
+    app: postgress
+spec:
+  storageClassName: postgress-stg
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
