@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    allowSnippetAnnotations: true
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
@@ -10,9 +9,9 @@ metadata:
     ingress.kubernetes.io/configuration-snippet: "proxy_set_header Host $http_host;\nproxy_set_header
       X-Real-IP $remote_addr;\nproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\nproxy_set_header X-Forwarded-Proto $scheme;"
     kubernetes.io/tls-acme: "true"
-    nginx.ingress.kubernetes.io/server-snippet: |-
-      client_max_body_size 100G;
-      server_tokens off;
+    #nginx.ingress.kubernetes.io/server-snippet: |-
+    #  client_max_body_size 100G;
+    #  server_tokens off;
   name: nginx01
   namespace: default
 spec:
