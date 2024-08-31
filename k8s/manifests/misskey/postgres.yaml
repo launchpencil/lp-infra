@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: misskey-postgresql
 spec:
@@ -32,9 +32,7 @@ spec:
         volumeMounts:
         - name: postgres
           mountPath: /var/lib/postgresql/data/db-file
-  volumeClaimTemplates:
-  - metadata:
-      name: postgres
-    spec:
+    volumes:
+    - name: postgres
       persistentVolumeClaim:
-          claimName: postgress-pvc
+        claimName: postgress-pvc
