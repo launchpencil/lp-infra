@@ -1,4 +1,4 @@
-apiVersion: http://projectcalico.org/v3
+apiVersion: projectcalico.org/v3
 kind: BGPConfiguration
 metadata:
   name: default
