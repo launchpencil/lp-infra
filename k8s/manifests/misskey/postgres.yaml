@@ -3,11 +3,10 @@ kind: Deployment
 metadata:
   name: misskey-postgresql
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: misskey-postgres
-  serviceName: "misskey-postgresql"
-  replicas: 1
   template:
     metadata:
       labels:
