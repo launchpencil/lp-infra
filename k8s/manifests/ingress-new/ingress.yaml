@@ -78,10 +78,10 @@ spec:
             name: mathattack
             port:
               number: 80
- - host: mathattack.zikanwari.f5.si/rad
+ - host: mathattack.zikanwari.f5.si
     http:
       paths:
-      - path: /
+      - path: /rqd
         pathType: Prefix
         backend:
           service:
