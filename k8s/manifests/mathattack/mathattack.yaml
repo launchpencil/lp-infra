@@ -16,3 +16,25 @@ spec:
       - name: mathattack
         image: ghcr.io/zikanwari/mathattack:number
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mathattack-rad
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mathattack-rad
+  template:
+    metadata:
+      labels:
+        app: mathattack-rad
+    spec:
+      containers:
+      - name: mathattack
+        image: ghcr.io/zikanwari/mathattack
+        imagePullPolicy: Always
+ 
