@@ -1,37 +1,37 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: misskey-postgresql
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: misskey-postgres
-  template:
-    metadata:
-      labels:
-        app: misskey-postgres
-    spec:
-      containers:
-      - name: postgres
-        image: postgres:15-alpine
-        env:
-          - name: POSTGRES_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: misskey
-                key: dbpass
-          - name: POSTGRES_USER
-            valueFrom:
-              secretKeyRef:
-                name: misskey
-                key: dbname
-          - name: PGDATA
-            value: "/var/lib/postgresql/data/db-file"
-        volumeMounts:
-        - name: postgres
-          mountPath: /var/lib/postgresql/data/db-file
-      volumes:
-      - name: postgres
-        persistentVolumeClaim:
-          claimName: postgress-pvc
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: misskey-postgresql
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: misskey-postgres
+#  template:
+#    metadata:
+#      labels:
+#        app: misskey-postgres
+#    spec:
+#      containers:
+#      - name: postgres
+#        image: postgres:15-alpine
+#        env:
+#          - name: POSTGRES_PASSWORD
+#            valueFrom:
+#              secretKeyRef:
+#                name: misskey
+#                key: dbpass
+#          - name: POSTGRES_USER
+#            valueFrom:
+#              secretKeyRef:
+#                name: misskey
+#                key: dbname
+#          - name: PGDATA
+#            value: "/var/lib/postgresql/data/db-file"
+#        volumeMounts:
+#        - name: postgres
+#          mountPath: /var/lib/postgresql/data/db-file
+#      volumes:
+#      - name: postgres
+#        persistentVolumeClaim:
+#          claimName: postgress-pvc
