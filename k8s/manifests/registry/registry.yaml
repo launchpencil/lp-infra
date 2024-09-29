@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: docker-registry
-  namespace: infra-backend
 spec:
   serviceName: docker-registry
   replicas: 1

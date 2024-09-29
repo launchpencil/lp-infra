@@ -2,11 +2,10 @@ kind: Service
 apiVersion: v1
 metadata:
   name: docker-registry
-  namespace: infra-backend
   labels:
     app: docker-registry
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: docker-registry
   ports:
