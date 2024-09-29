@@ -207,3 +207,18 @@ spec:
   - roulette.zikanwari.f5.si
 
 ---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dynmap-mc01
+spec:
+  secretName: dynmap-mc01-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: mc01.dynmap.zikanwari.f5.si
+  dnsNames:
+  - mc01.dynmap.zikanwari.f5.si
+
+---

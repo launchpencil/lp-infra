@@ -197,7 +197,17 @@ spec:
           service:
             name: qrdrop
             port:
-              number: 80  
+              number: 80
+  - host: mc01.dynmap.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dynmap-mc01
+            port:
+              number: 80
   tls:
   - hosts:
     - line.zikanwari.f5.si
@@ -238,3 +248,6 @@ spec:
   - hosts:
     - roulette.zikanwari.f5.si
     secretName: roulette-tls
+  - hosts:
+    - mc01.dynmap.zikanwari.f5.si
+    secretName: dynmap-mc01-tls

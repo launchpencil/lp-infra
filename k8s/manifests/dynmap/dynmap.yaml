@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynmap-mc01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynmap-mc01
+  template:
+    metadata:
+      labels:
+        app: dynmap-mc01
+    spec:
+      containers:
+      - name: dynmap-mc01
+        image: docker-registry/dynmap-mc01
+        imagePullPolicy: Always
