@@ -222,3 +222,18 @@ spec:
   - mc01.dynmap.zikanwari.f5.si
 
 ---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: registry
+spec:
+  secretName: registry-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: registry.launchpencil.f5.si
+  dnsNames:
+  - registry.launchpencil.f5.si
+
+---
