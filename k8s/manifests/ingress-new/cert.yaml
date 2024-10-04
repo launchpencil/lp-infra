@@ -226,6 +226,21 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
+  name: dynmap-lobby
+spec:
+  secretName: dynmap-lobby-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: lobby.dynmap.zikanwari.f5.si
+  dnsNames:
+  - lobby.dynmap.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
   name: registry
 spec:
   secretName: registry-tls

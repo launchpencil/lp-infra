@@ -16,3 +16,24 @@ spec:
       - name: dynmap-mc01
         image: registry.launchpencil.f5.si/dynmap:mc01
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynmap-lobby
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynmap-lobby
+  template:
+    metadata:
+      labels:
+        app: dynmap-lobby
+    spec:
+      containers:
+      - name: dynmap-lobby
+        image: registry.launchpencil.f5.si/dynmap:lobby
+        imagePullPolicy: Always

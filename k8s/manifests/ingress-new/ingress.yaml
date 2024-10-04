@@ -208,6 +208,16 @@ spec:
             name: dynmap-mc01
             port:
               number: 80
+  - host: lobby.dynmap.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dynmap-lobby
+            port:
+              number: 80
   - host: registry.launchpencil.f5.si
     http:
       paths:
@@ -261,6 +271,9 @@ spec:
   - hosts:
     - mc01.dynmap.zikanwari.f5.si
     secretName: dynmap-mc01-tls
+  - hosts:
+    - lobby.dynmap.zikanwari.f5.si
+    secretName: dynmap-lobby-tls
   - hosts:
     - registry.launchpencil.f5.si
     secretName: registry-tls
