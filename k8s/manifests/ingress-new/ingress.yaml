@@ -148,6 +148,16 @@ spec:
             name: factorization-api
             port:
               number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /stress/predict
+        pathType: Prefix
+        backend:
+          service:
+            name: stress-predict
+            port:
+              number: 80
   - host: minio.launchpencil.f5.si
     http:
       paths:

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stress-predict
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stress-predict
+  template:
+    metadata:
+      labels:
+        app: stress-predict
+    spec:
+      containers:
+      - name: stress-predict
+        image: ghcr.io/omzh-scitechs/high_school_stress-api:latest
+        imagePullPolicy: Always
