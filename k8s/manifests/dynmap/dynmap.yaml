@@ -37,3 +37,24 @@ spec:
       - name: dynmap-lobby
         image: registry.launchpencil.f5.si/dynmap:lobby
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynmap-sctech
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynmap-sctech
+  template:
+    metadata:
+      labels:
+        app: dynmap-sctech
+    spec:
+      containers:
+      - name: dynmap-sctech
+        image: registry.launchpencil.f5.si/dynmap:sctech
+        imagePullPolicy: Always

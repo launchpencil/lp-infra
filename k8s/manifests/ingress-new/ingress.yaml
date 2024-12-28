@@ -228,6 +228,16 @@ spec:
             name: dynmap-lobby
             port:
               number: 80
+  - host: sctech.dynmap.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dynmap-sctech
+            port:
+              number: 80
   - host: registry.launchpencil.f5.si
     http:
       paths:
@@ -284,6 +294,9 @@ spec:
   - hosts:
     - lobby.dynmap.zikanwari.f5.si
     secretName: dynmap-lobby-tls
+  - hosts:
+    - sctech.dynmap.zikanwari.f5.si
+    secretName: dynmap-sctech-tls
   - hosts:
     - registry.launchpencil.f5.si
     secretName: registry-tls

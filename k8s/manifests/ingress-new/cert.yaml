@@ -241,6 +241,21 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
+  name: dynmap-sctech
+spec:
+  secretName: dynmap-sctech-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: sctech.dynmap.zikanwari.f5.si
+  dnsNames:
+  - sctech.dynmap.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
   name: registry
 spec:
   secretName: registry-tls
