@@ -1,13 +1,12 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: misskey-redis
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: misskey-redis
-  serviceName: "misskey-redis"
-  replicas: 1
   template:
     metadata:
       labels:
@@ -16,16 +15,3 @@ spec:
       containers:
       - name: redis
         image: redis:7-alpine
-        volumeMounts:
-        - name: redis
-          mountPath: /data
-  volumeClaimTemplates:
-  - metadata:
-      name: redis
-    spec:
-      storageClassName: nfs-client
-      accessModes:
-      - ReadWriteOnce
-      resources:
-        requests:
-          storage: 10Gi
