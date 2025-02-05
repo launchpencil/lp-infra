@@ -4,7 +4,7 @@ metadata:
   name: database-influxdb
 spec:
   serviceName: database-influxdb
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: database-influxdb
