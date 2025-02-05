@@ -19,7 +19,7 @@ spec:
           - name: DEFAULT_DOMAIN
             value: "s.zikanwari.f5.si"
           - name: IS_HTTPS_ENABLED
-            value: "false"
+            value: "true"
           - name: GEOLITE_LICENSE_KEY
             value: "vFoxNzQk8O6PilLp"
           - name: DB_DRIVER
