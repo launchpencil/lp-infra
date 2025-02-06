@@ -73,3 +73,83 @@ spec:
       - name: mibs
         persistentVolumeClaim:
           claimName: mib
+
+---
+
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: zabbix-agent
+  namespace: monitor
+spec:
+  selector:
+   matchLabels:
+    name: zabbix-agent
+  template:
+    metadata:
+      labels:
+        name: zabbix-agent
+        app: zabbix
+    spec:
+      hostNetwork: true
+      hostIPC: true
+      hostPID: true
+      containers:
+        - name: zabbix-agent
+          image: zabbix/zabbix-agent
+          env:
+            - name: ZBX_DENYKEY
+              value: "system.run[*]"
+            - name: ZBX_LOGREMOTECOMMANDS
+              value: "1"
+            - name: ZBX_SERVER_HOST
+              value: "zabbix-server"
+            - name: ZBX_PASSIVE_ALLOW
+              value: "true"
+            - name: ZBX_ACTIVE_ALLOW
+              value: "true"
+            - name: ZBX_HOSTNAME
+              valueFrom:
+               fieldRef:
+                 fieldPath: spec.nodeName
+            - name: ZBX_UNSAFEUSERPARAMETERS
+              value: "0"
+          securityContext:
+            capabilities: {}
+            privileged: true
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+          volumeMounts:
+            - name: dev-volume
+              mountPath: /node/dev
+            - name: procfs-volume
+              readOnly: true
+              mountPath: /node/proc
+            - name: boot-volume
+              readOnly: true
+              mountPath: /node/boot
+            - name: run-volume
+              mountPath: /node/run
+            - name: var-run-volume
+              mountPath: /node/var/run
+      volumes:
+        - name: dev-volume
+          hostPath:
+            path: /dev
+            type: ''
+        - name: procfs-volume
+          hostPath:
+            path: /proc
+            type: ''
+        - name: boot-volume
+          hostPath:
+            path: /boot
+            type: ''
+        - name: run-volume
+          hostPath:
+            path: /run
+            type: ''
+        - name: var-run-volume
+          hostPath:
+            path: /var/run
+            type: ''
