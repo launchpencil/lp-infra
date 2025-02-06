@@ -32,8 +32,8 @@ kind: Service
 metadata:
   name: zabbix-agent
   labels:
-    app: zabbix
-  namespace: zabbix
+    app: zabbix-agent
+  namespace: monitor
 spec:
   ports:
   - port: 10050
