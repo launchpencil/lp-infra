@@ -24,3 +24,20 @@ spec:
     targetPort: 10051
   selector:
     app: zabbix-server
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: zabbix-agent
+  labels:
+    app: zabbix
+  namespace: zabbix
+spec:
+  ports:
+  - port: 10050
+    targetPort: 10050
+    name: zabbix-agent
+  selector:
+    name: zabbix-agent
