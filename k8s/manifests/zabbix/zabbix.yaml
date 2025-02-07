@@ -94,6 +94,8 @@ spec:
       hostNetwork: true
       hostIPC: true
       hostPID: true
+      nodeSelector:
+        kubernetes.io/os: linux
       containers:
         - name: zabbix-agent
           image: zabbix/zabbix-agent
