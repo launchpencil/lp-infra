@@ -94,8 +94,10 @@ spec:
       hostNetwork: true
       hostIPC: true
       hostPID: true
-      nodeSelector:
-        kubernetes.io/os: linux
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
       containers:
         - name: zabbix-agent
           image: zabbix/zabbix-agent
