@@ -83,8 +83,8 @@ metadata:
   namespace: monitor
 spec:
   selector:
-   matchLabels:
-    name: zabbix-agent
+    matchLabels:
+      name: zabbix-agent
   template:
     metadata:
       labels:
@@ -103,15 +103,13 @@ spec:
             - name: ZBX_LOGREMOTECOMMANDS
               value: "1"
             - name: ZBX_SERVER_HOST
-              value: "zabbix-server"
-            - name: ZBX_PASSIVE_ALLOW
-              value: "true"
+              value: "10.1.0.0/16"
             - name: ZBX_ACTIVE_ALLOW
-              value: "true"
+              value: "false"
             - name: ZBX_HOSTNAME
               valueFrom:
-               fieldRef:
-                 fieldPath: spec.nodeName
+                fieldRef:
+                  fieldPath: spec.nodeName
             - name: ZBX_UNSAFEUSERPARAMETERS
               value: "0"
           securityContext:
