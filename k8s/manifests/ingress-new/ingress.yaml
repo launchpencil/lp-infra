@@ -269,6 +269,16 @@ spec:
             name: shlink
             port:
               number: 80
+  - host: speed.launchpencil.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: librespeed
+            port:
+              number: 80
   tls:
   - hosts:
     - line.zikanwari.f5.si
@@ -327,3 +337,6 @@ spec:
   - hosts:
     - s.launchpencil.f5.si
     secretName: lp-shlink-tls
+  - hosts:
+    - speed.launchpencil.f5.si
+    secretName: librespeed-tls

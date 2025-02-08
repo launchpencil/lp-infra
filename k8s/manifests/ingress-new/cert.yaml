@@ -297,3 +297,18 @@ spec:
   - s.launchpencil.f5.si
 
 ---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: librespeed
+spec:
+  secretName: librespeed-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: speed.launchpencil.f5.si
+  dnsNames:
+  - speed.launchpencil.f5.si
+
+---
