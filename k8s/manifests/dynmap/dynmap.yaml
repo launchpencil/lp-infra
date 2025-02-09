@@ -58,3 +58,24 @@ spec:
       - name: dynmap-sctech
         image: registry.launchpencil.f5.si/dynmap:sctech
         imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynmap-ric
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynmap-ric
+  template:
+    metadata:
+      labels:
+        app: dynmap-ric
+    spec:
+      containers:
+      - name: dynmap-ric
+        image: registry.launchpencil.f5.si/dynmap:ric
+        imagePullPolicy: Always

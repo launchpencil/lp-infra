@@ -239,6 +239,16 @@ spec:
             name: dynmap-sctech
             port:
               number: 80
+  - host: ric.dynmap.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dynmap-ric
+            port:
+              number: 80
   - host: registry.launchpencil.f5.si
     http:
       paths:
@@ -328,6 +338,9 @@ spec:
   - hosts:
     - sctech.dynmap.zikanwari.f5.si
     secretName: dynmap-sctech-tls
+  - hosts:
+    - ric.dynmap.zikanwari.f5.si
+    secretName: dynmap-ric-tls
   - hosts:
     - registry.launchpencil.f5.si
     secretName: registry-tls
