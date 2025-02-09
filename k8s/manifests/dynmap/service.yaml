@@ -43,3 +43,19 @@ spec:
     targetPort: 80
   selector:
     app: dynmap-sctech
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dynmap-ric
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: dynmap-ric
