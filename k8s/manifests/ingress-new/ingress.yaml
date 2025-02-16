@@ -109,9 +109,6 @@ spec:
             name: zikanwari-api
             port:
               number: 80
-  - host: api.launchpencil.f5.si
-    http:
-      paths:
       - path: /todo
         pathType: Prefix
         backend:
@@ -119,9 +116,6 @@ spec:
             name: todo-api
             port:
               number: 80
-  - host: api.launchpencil.f5.si
-    http:
-      paths:
       - path: /waitdisplay
         pathType: Prefix
         backend:
@@ -129,9 +123,6 @@ spec:
             name: waitdisplay-server
             port:
               number: 80
-  - host: api.launchpencil.f5.si
-    http:
-      paths:
       - path: /studybattle
         pathType: Prefix
         backend:
@@ -139,9 +130,6 @@ spec:
             name: studybattle-api
             port:
               number: 80
-  - host: api.launchpencil.f5.si
-    http:
-      paths:
       - path: /factorization
         pathType: Prefix
         backend:
@@ -149,8 +137,6 @@ spec:
             name: factorization-api
             port:
               number: 80
-  - host: api.launchpencil.f5.si
-    http:
       paths:
       - path: /stress/predict
         pathType: Prefix
@@ -297,6 +283,20 @@ spec:
         backend:
           service:
             name: maicoder-web
+            port:
+              number: 80
+      - path: /contest
+        pathType: Prefix
+        backend:
+          service:
+            name: maicoder-web-problem
+            port:
+              number: 80
+      - path: /quiz
+        pathType: Prefix
+        backend:
+          service:
+            name: maicoder-web-problem
             port:
               number: 80
   - host: api.maicoder.f5.si

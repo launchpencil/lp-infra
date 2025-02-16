@@ -27,3 +27,21 @@ spec:
     targetPort: 80
   selector:
     app: maicoder-web
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: maicoder-web-problem
+spec:
+  type: ClusterIP
+  ports:
+  - name: "http-port"
+    protocol: "TCP"
+    port: 80
+    targetPort: 80
+  selector:
+    app: maicoder-web-problem
+
+---
