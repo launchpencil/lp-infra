@@ -327,3 +327,33 @@ spec:
     - ric.dynmap.zikanwari.f5.si
   
 ---
+
+  apiVersion: cert-manager.io/v1
+  kind: Certificate
+  metadata:
+    name: maicoder-web
+  spec:
+    secretName: maicoder-web-tls
+    issuerRef:
+      name: letsencrypt
+      kind: ClusterIssuer
+    commonName: maicoder.f5.si
+    dnsNames:
+    - maicoder.f5.si
+  
+---
+
+  apiVersion: cert-manager.io/v1
+  kind: Certificate
+  metadata:
+    name: maicoder-api
+  spec:
+    secretName: maicoder-api-tls
+    issuerRef:
+      name: letsencrypt
+      kind: ClusterIssuer
+    commonName: api.maicoder.f5.si
+    dnsNames:
+    - api.maicoder.f5.si
+  
+---

@@ -289,6 +289,26 @@ spec:
             name: librespeed
             port:
               number: 80
+  - host: maicoder.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: maicoder-web
+            port:
+              number: 80
+  - host: api.maicoder.f5.si
+    http:
+      paths:
+      - path: /judge
+        pathType: Prefix
+        backend:
+          service:
+            name: maicoder-judge
+            port:
+              number: 80
   tls:
   - hosts:
     - line.zikanwari.f5.si
@@ -353,3 +373,9 @@ spec:
   - hosts:
     - speed.launchpencil.f5.si
     secretName: librespeed-tls
+  - hosts:
+    - maicoder.f5.si
+    secretName: maicoder-web-tls
+  - hosts:
+    - api.maicoder.f5.si
+    secretName: maicoder-api-tls

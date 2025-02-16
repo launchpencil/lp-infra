@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maicoder-judge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maicoder-judge
+  template:
+    metadata:
+      labels:
+        app: maicoder-judge
+    spec:
+      containers:
+      - name: maicoder-judge
+        image: ghcr.io/omzh-scitechs/maicoder:judge
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maicoder-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maicoder-web
+  template:
+    metadata:
+      labels:
+        app: maicoder-web
+    spec:
+      containers:
+      - name: maicoder-web
+        image: ghcr.io/omzh-scitechs/maicoder:web
+        imagePullPolicy: Always
