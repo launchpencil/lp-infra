@@ -137,7 +137,6 @@ spec:
             name: factorization-api
             port:
               number: 80
-      paths:
       - path: /stress/predict
         pathType: Prefix
         backend:
