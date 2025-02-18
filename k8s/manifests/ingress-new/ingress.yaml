@@ -288,24 +288,24 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: maicoder-web-problem
+            name: maicoder-api
             port:
               number: 80
       - path: /quiz
         pathType: Prefix
         backend:
           service:
-            name: maicoder-web-problem
+            name: maicoder-api
             port:
               number: 80
   - host: api.maicoder.f5.si
     http:
       paths:
-      - path: /judge
+      - path: /
         pathType: Prefix
         backend:
           service:
-            name: maicoder-judge
+            name: maicoder-api
             port:
               number: 80
   tls:

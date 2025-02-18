@@ -39,24 +39,3 @@ spec:
         imagePullPolicy: Always
 
 ---
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: maicoder-web-problem
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: maicoder-web-problem
-  template:
-    metadata:
-      labels:
-        app: maicoder-web-problem
-    spec:
-      containers:
-      - name: maicoder-web-problem
-        image: ghcr.io/omzh-scitechs/maicoder:web-problem
-        imagePullPolicy: Always
-
----
