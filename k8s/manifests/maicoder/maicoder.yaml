@@ -16,6 +16,13 @@ spec:
       - name: maicoder-api
         image: ghcr.io/omzh-scitechs/maicoder:api
         imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: "/upload"
+          name: maicoder-pvc
+      volumes:
+      - name: maicoder-pvc
+        persistentVolumeClaim:
+          claimName: maicoder-pvc
 
 ---
 
