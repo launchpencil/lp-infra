@@ -46,3 +46,24 @@ spec:
         imagePullPolicy: Always
 
 ---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maicoder-web-template
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: maicoder-web-template
+  template:
+    metadata:
+      labels:
+        app: maicoder-web-template
+    spec:
+      containers:
+      - name: maicoder-web-template
+        image: ghcr.io/omzh-scitechs/maicoder:web-template
+        imagePullPolicy: Always
+
+---

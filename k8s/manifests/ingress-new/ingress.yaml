@@ -284,18 +284,18 @@ spec:
             name: maicoder-web
             port:
               number: 80
-      - path: /contest
+      - path: /contests
         pathType: Prefix
         backend:
           service:
-            name: maicoder-api
+            name: maicoder-web-template
             port:
               number: 80
       - path: /problems
         pathType: Prefix
         backend:
           service:
-            name: maicoder-api
+            name: maicoder-web-template
             port:
               number: 80
   - host: api.maicoder.f5.si
