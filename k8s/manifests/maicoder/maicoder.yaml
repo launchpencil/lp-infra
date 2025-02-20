@@ -17,7 +17,7 @@ spec:
         image: ghcr.io/omzh-scitechs/maicoder:api
         imagePullPolicy: Always
         volumeMounts:
-        - mountPath: "/app/problems"
+        - mountPath: "/app/data"
           name: maicoder-pvc
       volumes:
       - name: maicoder-pvc
