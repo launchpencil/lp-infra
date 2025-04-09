@@ -108,8 +108,8 @@ spec:
               value: "1"
             - name: ZBX_SERVER_HOST
               value: "10.1.0.0/16"
-            - name: ZBX_ACTIVE_ALLOW
-              value: "false"
+            - name: ZBX_PASSIVESERVERS
+              value: "10.0.0.5"
             - name: ZBX_HOSTNAME
               valueFrom:
                 fieldRef:
