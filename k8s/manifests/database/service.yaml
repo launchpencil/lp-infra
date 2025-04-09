@@ -10,19 +10,3 @@ spec:
     port: 80
   selector:
     app: phpmyadmin
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: immich-postgres
-  namespace: immich
-spec:
-  type: LoadBalancer
-  ports:
-  - name: "immich-postgres"
-    protocol: "TCP"
-    port: 80
-  selector:
-    app: immich-postgres
