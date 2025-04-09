@@ -357,3 +357,19 @@ spec:
     - api.maicoder.f5.si
   
 ---
+
+  apiVersion: cert-manager.io/v1
+  kind: Certificate
+  metadata:
+    name: immich
+    namespace: immich
+  spec:
+    secretName: immich-tls
+    issuerRef:
+      name: letsencrypt
+      kind: ClusterIssuer
+    commonName: immich.launchpencil.f5.si
+    dnsNames:
+    - immich.launchpencil.f5.si
+  
+---
