@@ -19,6 +19,22 @@ spec:
         volumeMounts:
         - mountPath: "/app/data"
           name: maicoder-pvc
+        env:
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: maicoder
+              key: DB_PASSWORD
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: maicoder
+              key: DB_USER
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: maicoder
+              key: SECRET_KEY
       volumes:
       - name: maicoder-pvc
         persistentVolumeClaim:
