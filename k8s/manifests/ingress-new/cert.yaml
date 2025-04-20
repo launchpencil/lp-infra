@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: zikanwari
-  namespace: default
+  namespace: zikanwari
 spec:
   secretName: zikanwari-tls
   issuerRef:
@@ -18,6 +18,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: line
+  namespace: zikanwari
 spec:
   secretName: line-tls
   issuerRef:
@@ -33,6 +34,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: app
+  namespace: zikanwari
 spec:
   secretName: app-tls
   issuerRef:
@@ -101,6 +103,23 @@ spec:
   commonName: rad.mathattack.zikanwari.f5.si
   dnsNames:
   - rad.mathattack.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api
+  namespace: zikanwari
+spec:
+  secretName: api-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: api.launchpencil.f5.si
+  dnsNames:
+  - api.launchpencil.f5.si
+  
 ---
 
 apiVersion: cert-manager.io/v1

@@ -9,36 +9,11 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, X-Api-Key, Content-Type"
-    #ingress.kubernetes.io/configuration-snippet: "proxy_set_header Host $http_host;\nproxy_set_header
-    #  X-Real-IP $remote_addr;\nproxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\nproxy_set_header X-Forwarded-Proto $scheme;"
-    #nginx.ingress.kubernetes.io/server-snippet: |-
-    #  client_max_body_size 100G;
-    #  server_tokens off;
   name: nginx01
   namespace: default
 spec:
   ingressClassName: nginx
   rules:
-  - host: line.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: zikanwari-line
-            port:
-              number: 3000
-  - host: app.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: zikanwari-app
-            port:
-              number: 80
   - host: studybattle.zikanwari.f5.si
     http:
       paths:
@@ -102,20 +77,6 @@ spec:
   - host: api.launchpencil.f5.si
     http:
       paths:
-      - path: /zikanwari
-        pathType: Prefix
-        backend:
-          service:
-            name: zikanwari-api
-            port:
-              number: 80
-      - path: /todo
-        pathType: Prefix
-        backend:
-          service:
-            name: todo-api
-            port:
-              number: 80
       - path: /waitdisplay
         pathType: Prefix
         backend:
@@ -309,12 +270,6 @@ spec:
             port:
               number: 80
   tls:
-  - hosts:
-    - line.zikanwari.f5.si
-    secretName: line-tls
-  - hosts:
-    - app.zikanwari.f5.si
-    secretName: app-tls
   - hosts:
     - waitdisplay.zikanwari.f5.si
     secretName: waitdisplay-tls

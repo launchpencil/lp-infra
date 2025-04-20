@@ -1,26 +1,63 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: zikanwari
   annotations:
-    nginx.ingress.kubernetes.io/auth-type: basic
-    nginx.ingress.kubernetes.io/auth-secret: zikan-auth
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
     nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, X-Api-Key, Content-Type"
+  name: nginx01
+  namespace: zikanwari
 spec:
   ingressClassName: nginx
   rules:
-  - host: zikanwari.f5.si
+  - host: line.zikanwari.f5.si
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: zikanwari
+            name: zikanwari-line
+            port:
+              number: 3000
+  - host: app.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: zikanwari-app
+            port:
+              number: 80
+  - host: api.launchpencil.f5.si
+    http:
+      paths:
+      - path: /zikanwari
+        pathType: Prefix
+        backend:
+          service:
+            name: zikanwari-api
+            port:
+              number: 80
+      - path: /todo
+        pathType: Prefix
+        backend:
+          service:
+            name: todo-api
             port:
               number: 80
   tls:
   - hosts:
-    - zikanwari.f5.si
-    secretName: zikanwari-tls
+    - line.zikanwari.f5.si
+    secretName: line-tls
+  - hosts:
+    - app.zikanwari.f5.si
+    secretName: app-tls
+  - hosts:
+    - api.launchpencil.f5.si
+    secretName: api-tls
