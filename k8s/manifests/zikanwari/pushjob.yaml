@@ -42,6 +42,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: kadai-push
+  namespace: zikanwari
 spec:
   schedule: "5 11 * * 0-4" 
   jobTemplate:
