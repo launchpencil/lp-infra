@@ -7,8 +7,10 @@ resources:
 images:
   - name: ghcr.io/omzh-scitechs/maicoder-api
     newName: ghcr.io/omzh-scitechs/maicoder-api
-    newTag: sha-b50e3c2
+    digest: sha256:fdc468be2c3f951bdc91bf9f72182c054584ba777a57f6a3298c64649165419e
   - name: ghcr.io/omzh-scitechs/maicoder-web
     newName: ghcr.io/omzh-scitechs/maicoder-web
+    digest: sha256:175c9504e6595ac02ccc2f56c55bcb287ee83fbf37febe29402ad5b05abc6b7a
   - name: ghcr.io/omzh-scitechs/maicoder-web-template
     newName: ghcr.io/omzh-scitechs/maicoder-web-template
+    digest: sha256:6276121d37a8f807d20e192cd93cc0ff0e6c2ce64c992f280e856ee6cbdcb0eb
