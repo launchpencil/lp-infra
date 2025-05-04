@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: maicoder-api
-        image: ghcr.io/omzh-scitechs/maicoder:api
+        image: ghcr.io/omzh-scitechs/maicoder-api
         imagePullPolicy: Always
         volumeMounts:
         - mountPath: "/app/data"
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: maicoder-web
-        image: ghcr.io/omzh-scitechs/maicoder:web
+        image: ghcr.io/omzh-scitechs/maicoder-web
         imagePullPolicy: Always
 
 ---
@@ -79,7 +79,7 @@ spec:
     spec:
       containers:
       - name: maicoder-web-template
-        image: ghcr.io/omzh-scitechs/maicoder:web-template
+        image: ghcr.io/omzh-scitechs/maicoder-web-template
         imagePullPolicy: Always
 
 ---

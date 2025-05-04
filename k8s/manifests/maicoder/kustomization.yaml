@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - maicoder.yaml
+  - service.yaml
+  - storage.yaml
+
+images:
+  - name: ghcr.io/omzh-scitechs/maicoder-api
+    newName: ghcr.io/omzh-scitechs/maicoder-api
+  - name: ghcr.io/omzh-scitechs/maicoder-web
+    newName: ghcr.io/omzh-scitechs/maicoder-web
+  - name: ghcr.io/omzh-scitechs/maicoder-web-template
+    newName: ghcr.io/omzh-scitechs/maicoder-web-template
