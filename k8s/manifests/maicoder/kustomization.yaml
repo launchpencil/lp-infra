@@ -10,7 +10,7 @@ images:
     newTag: sha-b50e3c2
   - name: ghcr.io/omzh-scitechs/maicoder-web
     newName: ghcr.io/omzh-scitechs/maicoder-web
-    newTag: sha-8163a17
+    newTag: sha-979a94e
   - name: ghcr.io/omzh-scitechs/maicoder-web-template
     newName: ghcr.io/omzh-scitechs/maicoder-web-template
     newTag: sha-2db18a6
