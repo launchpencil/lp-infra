@@ -19,3 +19,10 @@ spec:
         image: ghcr.io/sukepc0824/hakuyou:latest
         ports:
         - containerPort: 5000
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: hakuyou-data
