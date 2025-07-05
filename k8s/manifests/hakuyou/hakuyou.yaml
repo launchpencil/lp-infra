@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hakuyou
+  labels:
+    app: hakuyou
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hakuyou
+  template:
+    metadata:
+      labels:
+        app: hakuyou
+    spec:
+      containers:
+      - name: hakuyou
+        image: ghcr.io/sukepc0824/hakuyou:latest
+        ports:
+        - containerPort: 5000

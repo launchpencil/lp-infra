@@ -392,3 +392,17 @@ spec:
     - immich.launchpencil.f5.si
   
 ---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: hakuyou
+  namespace: default
+spec:
+  secretName: hakuyou-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: hakuyou.zikanwari.f5.si
+  dnsNames:
+  - hakuyou.zikanwari.f5.si

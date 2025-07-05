@@ -269,6 +269,16 @@ spec:
             name: maicoder-api
             port:
               number: 80
+  - host: hakuyou.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hakuyou
+            port:
+              number: 80
   tls:
   - hosts:
     - waitdisplay.zikanwari.f5.si
@@ -333,3 +343,6 @@ spec:
   - hosts:
     - api.maicoder.f5.si
     secretName: maicoder-api-tls
+  - hosts:
+    - hakuyou.zikanwari.f5.si
+    secretName: hakuyou-tls
