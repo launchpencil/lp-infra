@@ -279,6 +279,16 @@ spec:
             name: hakuyou
             port:
               number: 80
+  - host: task.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: task
+            port:
+              number: 80
   tls:
   - hosts:
     - waitdisplay.zikanwari.f5.si
@@ -346,3 +356,6 @@ spec:
   - hosts:
     - hakuyou.zikanwari.f5.si
     secretName: hakuyou-tls
+  - hosts:
+    - task.zikanwari.f5.si
+    secretName: task-tls

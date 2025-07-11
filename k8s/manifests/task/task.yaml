@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task
+  labels:
+    app: task
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task
+  template:
+    metadata:
+      labels:
+        app: task
+    spec:
+      containers:
+      - name: task
+        image: ghcr.io/sukepc0824/task:latest
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: data
+          mountPath: /app/data/tasks.json
+          subPath: tasks.json
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: task-data

@@ -406,3 +406,18 @@ spec:
   commonName: hakuyou.zikanwari.f5.si
   dnsNames:
   - hakuyou.zikanwari.f5.si
+
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: task
+  namespace: default
+spec:
+  secretName: task-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: task.zikanwari.f5.si
+  dnsNames:
+  - task.zikanwari.f5.si
