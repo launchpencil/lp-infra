@@ -77,5 +77,5 @@ spec:
     spec:
       containers:
       - name: dynmap-ric
-        image: registry.launchpencil.f5.si/dynmap:ric
+        image: registry.launchpencil.f5.si/dynmap:ric2
         imagePullPolicy: Always
