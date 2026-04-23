@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hutility
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hutility
+  template:
+    metadata:
+      labels:
+        app: hutility
+    spec:
+      containers:
+      - name: hutility
+        image: ghcr.io/zikanwari/hutility:latest
+        imagePullPolicy: Always
