@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - hutility.yaml
+  - service.yaml
+
+images:
+  - name: ghcr.io/zikanwari/hutility
+    newName: ghcr.io/zikanwari/hutility
