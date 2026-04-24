@@ -14,5 +14,26 @@ spec:
     spec:
       containers:
       - name: hutility
-        image: ghcr.io/zikanwari/hutility:latest
+        image: ghcr.io/zikanwari/hutility
+        imagePullPolicy: Always
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hutility-docs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hutility-docs
+  template:
+    metadata:
+      labels:
+        app: hutility-docs
+    spec:
+      containers:
+      - name: hutility
+        image: ghcr.io/zikanwari/hutility-docs
         imagePullPolicy: Always

@@ -8,3 +8,5 @@ resources:
 images:
   - name: ghcr.io/zikanwari/hutility
     newName: ghcr.io/zikanwari/hutility
+  - name: ghcr.io/zikanwari/hutility-docs
+    newName: ghcr.io/zikanwari/hutility-docs

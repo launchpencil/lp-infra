@@ -436,3 +436,18 @@ spec:
     commonName: hutility.f5.si
     dnsNames:
     - hutility.f5.si
+  
+---
+
+  apiVersion: cert-manager.io/v1
+  kind: Certificate
+  metadata:
+    name: hutility-docs
+  spec:
+    secretName: hutility-docs-tls
+    issuerRef:
+      name: letsencrypt
+      kind: ClusterIssuer
+    commonName: docs.hutility.f5.si
+    dnsNames:
+    - docs.hutility.f5.si
