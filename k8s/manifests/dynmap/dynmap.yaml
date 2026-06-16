@@ -79,3 +79,25 @@ spec:
       - name: dynmap-ric
         image: registry.launchpencil.f5.si/dynmap:ric2
         imagePullPolicy: Always
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynmap-mc02
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynmap-mc02
+  template:
+    metadata:
+      labels:
+        app: dynmap-mc02
+    spec:
+      containers:
+      - name: dynmap-mc02
+        image: registry.launchpencil.f5.si/dynmap:mc02
+        imagePullPolicy: Always
+
+---

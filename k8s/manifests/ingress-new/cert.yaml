@@ -245,6 +245,21 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
+  name: dynmap-mc02
+spec:
+  secretName: dynmap-mc02-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: mc02.dynmap.zikanwari.f5.si
+  dnsNames:
+  - mc02.dynmap.zikanwari.f5.si
+
+---
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
   name: dynmap-lobby
 spec:
   secretName: dynmap-lobby-tls
