@@ -10,3 +10,6 @@ images:
   - name: ghcr.io/zikanwari/hutility-docs
     newName: ghcr.io/zikanwari/hutility-docs
     newTag: latest
+  - name: ghcr.io/zikanwari/hutility:vx.y.z
+    newName: ghcr.io/zikanwari/hutility
+    newTag: v1.2.0
