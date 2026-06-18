@@ -165,6 +165,16 @@ spec:
             name: dynmap-mc01
             port:
               number: 80
+  - host: mc02.dynmap.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dynmap-mc02
+            port:
+              number: 80
   - host: lobby.dynmap.zikanwari.f5.si
     http:
       paths:
@@ -279,6 +289,36 @@ spec:
             name: hakuyou
             port:
               number: 80
+  - host: task.zikanwari.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: task
+            port:
+              number: 80
+  - host: hutility.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hutility
+            port:
+              number: 80
+  - host: docs.hutility.f5.si
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hutility-docs
+            port:
+              number: 80
   tls:
   - hosts:
     - waitdisplay.zikanwari.f5.si
@@ -317,6 +357,9 @@ spec:
     - mc01.dynmap.zikanwari.f5.si
     secretName: dynmap-mc01-tls
   - hosts:
+    - mc02.dynmap.zikanwari.f5.si
+    secretName: dynmap-mc02-tls
+  - hosts:
     - lobby.dynmap.zikanwari.f5.si
     secretName: dynmap-lobby-tls
   - hosts:
@@ -346,3 +389,12 @@ spec:
   - hosts:
     - hakuyou.zikanwari.f5.si
     secretName: hakuyou-tls
+  - hosts:
+    - task.zikanwari.f5.si
+    secretName: task-tls
+  - hosts:
+    - hutility.f5.si
+    secretName: hutility-tls
+  - hosts:
+    - docs.hutility.f5.si
+    secretName: hutility-docs-tls
