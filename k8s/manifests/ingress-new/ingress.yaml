@@ -105,6 +105,13 @@ spec:
             name: stress-predict
             port:
               number: 80
+      - path: /gtfs
+        pathType: Prefix
+        backend:
+          service:
+            name: gtfs-backend
+            port:
+              number: 80
   - host: minio.launchpencil.f5.si
     http:
       paths:
