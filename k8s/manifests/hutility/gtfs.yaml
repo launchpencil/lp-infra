@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gtfs-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gtfs-backend
+  template:
+    metadata:
+      labels:
+        app: gtfs-backend
+    spec:
+      containers:
+      - name: gtfs-backend
+        image: ghcr.io/zikanwari/gtfs-backend:latest
+        imagePullPolicy: Always

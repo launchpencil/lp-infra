@@ -3,6 +3,8 @@ kind: Kustomization
 resources:
   - hutility.yaml
   - service.yaml
+  - gtfs.yaml
+
 images:
   - name: ghcr.io/zikanwari/hutility
     newName: ghcr.io/zikanwari/hutility
