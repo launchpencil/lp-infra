@@ -1,0 +1,37 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  labels:
+    kubevirt.io/vm: mc-proxy
+  name: mc-proxy
+  namespace: minecraft
+spec:
+  runStrategy: Halted
+  template:
+    metadata:
+      labels:
+        kubevirt.io/vm: mc-proxy
+    spec:
+      domain:
+        cpu:
+          cores: 1
+        devices:
+          disks:
+          - disk:
+              bus: virtio
+            name: dvdisk
+          interfaces:
+          - name: bridge-net
+            bridge: {}
+        resources:
+          requests:
+            memory: 1Gi
+      networks:
+        - name: bridge-net
+          multus:
+            networkName: default/bridge-1
+      terminationGracePeriodSeconds: 60
+      volumes:
+      - name: dvdisk
+        dataVolume:
+          name: mc-proxy
