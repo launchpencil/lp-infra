@@ -2,77 +2,78 @@ apiVersion: v1
 kind: Service
 metadata:
   name: dynmap-mc01
+  namespace: minecraft
 spec:
   type: ClusterIP
   ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
+    - name: "http-port"
+      protocol: "TCP"
+      port: 80
+      targetPort: 80
   selector:
     app: dynmap-mc01
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
   name: dynmap-lobby
+  namespace: minecraft
 spec:
   type: ClusterIP
   ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
+    - name: "http-port"
+      protocol: "TCP"
+      port: 80
+      targetPort: 80
   selector:
     app: dynmap-lobby
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
   name: dynmap-sctech
+  namespace: minecraft
 spec:
   type: ClusterIP
   ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
+    - name: "http-port"
+      protocol: "TCP"
+      port: 80
+      targetPort: 80
   selector:
     app: dynmap-sctech
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
   name: dynmap-ric
+  namespace: minecraft
 spec:
   type: ClusterIP
   ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
+    - name: "http-port"
+      protocol: "TCP"
+      port: 80
+      targetPort: 80
   selector:
     app: dynmap-ric
 
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
   name: dynmap-mc02
+  namespace: minecraft
 spec:
   type: ClusterIP
   ports:
-  - name: "http-port"
-    protocol: "TCP"
-    port: 80
-    targetPort: 80
+    - name: "http-port"
+      protocol: "TCP"
+      port: 80
+      targetPort: 80
   selector:
     app: dynmap-mc02
 
