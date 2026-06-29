@@ -295,7 +295,7 @@ spec:
   kind: Certificate
   metadata:
     name: dynmap-ric
-  namespace: minecraft
+    namespace: minecraft
   spec:
     secretName: dynmap-ric-tls
     issuerRef:
