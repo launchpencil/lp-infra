@@ -231,6 +231,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: dynmap-mc01
+  namespace: minecraft
 spec:
   secretName: dynmap-mc01-tls
   issuerRef:
@@ -246,6 +247,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: dynmap-mc02
+  namespace: minecraft
 spec:
   secretName: dynmap-mc02-tls
   issuerRef:
@@ -261,6 +263,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: dynmap-lobby
+  namespace: minecraft
 spec:
   secretName: dynmap-lobby-tls
   issuerRef:
@@ -276,6 +279,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: dynmap-sctech
+  namespace: minecraft
 spec:
   secretName: dynmap-sctech-tls
   issuerRef:
@@ -284,6 +288,22 @@ spec:
   commonName: sctech.dynmap.zikanwari.f5.si
   dnsNames:
   - sctech.dynmap.zikanwari.f5.si
+
+---
+
+  apiVersion: cert-manager.io/v1
+  kind: Certificate
+  metadata:
+    name: dynmap-ric
+  namespace: minecraft
+  spec:
+    secretName: dynmap-ric-tls
+    issuerRef:
+      name: letsencrypt
+      kind: ClusterIssuer
+    commonName: ric.dynmap.zikanwari.f5.si
+    dnsNames:
+    - ric.dynmap.zikanwari.f5.si
 
 ---
 
@@ -344,21 +364,6 @@ spec:
   commonName: speed.launchpencil.f5.si
   dnsNames:
   - speed.launchpencil.f5.si
-
----
-
-  apiVersion: cert-manager.io/v1
-  kind: Certificate
-  metadata:
-    name: dynmap-ric
-  spec:
-    secretName: dynmap-ric-tls
-    issuerRef:
-      name: letsencrypt
-      kind: ClusterIssuer
-    commonName: ric.dynmap.zikanwari.f5.si
-    dnsNames:
-    - ric.dynmap.zikanwari.f5.si
   
 ---
 

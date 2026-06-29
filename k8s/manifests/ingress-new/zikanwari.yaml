@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-origin: "*"
     kubernetes.io/tls-acme: "true"
     nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, X-Api-Key, Content-Type"
-  name: nginx01
+  name: ingress-zikanwari
   namespace: zikanwari
 spec:
   ingressClassName: nginx
