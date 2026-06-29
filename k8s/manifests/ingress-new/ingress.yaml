@@ -14,394 +14,329 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: studybattle.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: studybattle-client
-            port:
-              number: 80
-  - host: waitdisplay.zikanwari.f5.si
-    http:
-      paths:
-      - path: /show
-        pathType: Prefix
-        backend:
-          service:
-            name: waitdisplay-show
-            port:
-              number: 80
-  - host: waitdisplay.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: waitdisplay-client
-            port:
-              number: 80
-  - host: mathattack.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: mathattack
-            port:
-              number: 80
-  - host: rad.mathattack.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: mathattack-rad
-            port:
-              number: 80
-  - host: roulette.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: roulette
-            port:
-              number: 80
-  - host: api.launchpencil.f5.si
-    http:
-      paths:
-      - path: /waitdisplay
-        pathType: Prefix
-        backend:
-          service:
-            name: waitdisplay-server
-            port:
-              number: 80
-      - path: /studybattle
-        pathType: Prefix
-        backend:
-          service:
-            name: studybattle-api
-            port:
-              number: 80
-      - path: /factorization
-        pathType: Prefix
-        backend:
-          service:
-            name: factorization-api
-            port:
-              number: 80
-      - path: /stress/predict
-        pathType: Prefix
-        backend:
-          service:
-            name: stress-predict
-            port:
-              number: 80
-      - path: /gtfs
-        pathType: Prefix
-        backend:
-          service:
-            name: gtfs-backend
-            port:
-              number: 80
-  - host: minio.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: minio
-            port: 
-              number: 9000
-  - host: minio.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: minio
-            port: 
-              number: 9000
-  - host: test.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: test
-            port:
-              number: 80
-  - host: msky.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: misskey
-            port:
-              number: 80
-  - host: qrdrop.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: qrdrop
-            port:
-              number: 80
-  - host: mc01.dynmap.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: dynmap-mc01
-            port:
-              number: 80
-  - host: mc02.dynmap.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: dynmap-mc02
-            port:
-              number: 80
-  - host: lobby.dynmap.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: dynmap-lobby
-            port:
-              number: 80
-  - host: sctech.dynmap.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: dynmap-sctech
-            port:
-              number: 80
-  - host: ric.dynmap.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: dynmap-ric
-            port:
-              number: 80
-  - host: registry.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: docker-registry
-            port:
-              number: 80
-  - host: s.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: shlink
-            port:
-              number: 80
-  - host: s.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: shlink
-            port:
-              number: 80
-  - host: speed.launchpencil.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: librespeed
-            port:
-              number: 80
-  - host: maicoder.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: maicoder-web
-            port:
-              number: 80
-      - path: /contests
-        pathType: Prefix
-        backend:
-          service:
-            name: maicoder-web-template
-            port:
-              number: 80
-      - path: /problems
-        pathType: Prefix
-        backend:
-          service:
-            name: maicoder-web-template
-            port:
-              number: 80
-  - host: api.maicoder.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: maicoder-api
-            port:
-              number: 80
-  - host: hakuyou.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hakuyou
-            port:
-              number: 80
-  - host: task.zikanwari.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: task
-            port:
-              number: 80
-  - host: hutility.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hutility
-            port:
-              number: 80
-  - host: docs.hutility.f5.si
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hutility-docs
-            port:
-              number: 80
+    - host: studybattle.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: studybattle-client
+                port:
+                  number: 80
+    - host: waitdisplay.zikanwari.f5.si
+      http:
+        paths:
+          - path: /show
+            pathType: Prefix
+            backend:
+              service:
+                name: waitdisplay-show
+                port:
+                  number: 80
+    - host: waitdisplay.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: waitdisplay-client
+                port:
+                  number: 80
+    - host: mathattack.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mathattack
+                port:
+                  number: 80
+    - host: rad.mathattack.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mathattack-rad
+                port:
+                  number: 80
+    - host: roulette.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: roulette
+                port:
+                  number: 80
+    - host: api.launchpencil.f5.si
+      http:
+        paths:
+          - path: /waitdisplay
+            pathType: Prefix
+            backend:
+              service:
+                name: waitdisplay-server
+                port:
+                  number: 80
+          - path: /studybattle
+            pathType: Prefix
+            backend:
+              service:
+                name: studybattle-api
+                port:
+                  number: 80
+          - path: /factorization
+            pathType: Prefix
+            backend:
+              service:
+                name: factorization-api
+                port:
+                  number: 80
+          - path: /stress/predict
+            pathType: Prefix
+            backend:
+              service:
+                name: stress-predict
+                port:
+                  number: 80
+          - path: /gtfs
+            pathType: Prefix
+            backend:
+              service:
+                name: gtfs-backend
+                port:
+                  number: 80
+    - host: minio.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: minio
+                port:
+                  number: 9000
+    - host: minio.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: minio
+                port:
+                  number: 9000
+    - host: test.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: test
+                port:
+                  number: 80
+    - host: msky.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: misskey
+                port:
+                  number: 80
+    - host: qrdrop.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: qrdrop
+                port:
+                  number: 80
+    - host: registry.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: docker-registry
+                port:
+                  number: 80
+    - host: s.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: shlink
+                port:
+                  number: 80
+    - host: s.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: shlink
+                port:
+                  number: 80
+    - host: speed.launchpencil.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: librespeed
+                port:
+                  number: 80
+    - host: maicoder.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: maicoder-web
+                port:
+                  number: 80
+          - path: /contests
+            pathType: Prefix
+            backend:
+              service:
+                name: maicoder-web-template
+                port:
+                  number: 80
+          - path: /problems
+            pathType: Prefix
+            backend:
+              service:
+                name: maicoder-web-template
+                port:
+                  number: 80
+    - host: api.maicoder.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: maicoder-api
+                port:
+                  number: 80
+    - host: hakuyou.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hakuyou
+                port:
+                  number: 80
+    - host: task.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: task
+                port:
+                  number: 80
+    - host: hutility.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hutility
+                port:
+                  number: 80
+    - host: docs.hutility.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hutility-docs
+                port:
+                  number: 80
   tls:
-  - hosts:
-    - waitdisplay.zikanwari.f5.si
-    secretName: waitdisplay-tls
-  - hosts:
-    - mathattack.zikanwari.f5.si
-    secretName: mathattack-tls
-  - hosts:
-    - rad.mathattack.zikanwari.f5.si
-    secretName: rad-mathattack-tls
-  - hosts:
-    - api.launchpencil.f5.si
-    secretName: api-tls
-  - hosts:
-    - test.launchpencil.f5.si
-    secretName: test-tls
-  - hosts:
-    - studybattle.zikanwari.f5.si
-    secretName: studybattle-tls
-  - hosts:
-    - msky.launchpencil.f5.si
-    secretName: miisskey-tls
-  - hosts:
-    - minio.launchpencil.f5.si
-    secretName: minio-tls
-  - hosts:
-    - minio.zikanwari.f5.si
-    secretName: minio-zikan-tls
-  - hosts:
-    - qrdrop.zikanwari.f5.si
-    secretName: qrdrop-tls
-  - hosts:
-    - roulette.zikanwari.f5.si
-    secretName: roulette-tls
-  - hosts:
-    - mc01.dynmap.zikanwari.f5.si
-    secretName: dynmap-mc01-tls
-  - hosts:
-    - mc02.dynmap.zikanwari.f5.si
-    secretName: dynmap-mc02-tls
-  - hosts:
-    - lobby.dynmap.zikanwari.f5.si
-    secretName: dynmap-lobby-tls
-  - hosts:
-    - sctech.dynmap.zikanwari.f5.si
-    secretName: dynmap-sctech-tls
-  - hosts:
-    - ric.dynmap.zikanwari.f5.si
-    secretName: dynmap-ric-tls
-  - hosts:
-    - registry.launchpencil.f5.si
-    secretName: registry-tls
-  - hosts:
-    - s.zikanwari.f5.si
-    secretName: shlink-tls
-  - hosts:
-    - s.launchpencil.f5.si
-    secretName: lp-shlink-tls
-  - hosts:
-    - speed.launchpencil.f5.si
-    secretName: librespeed-tls
-  - hosts:
-    - maicoder.f5.si
-    secretName: maicoder-web-tls
-  - hosts:
-    - api.maicoder.f5.si
-    secretName: maicoder-api-tls
-  - hosts:
-    - hakuyou.zikanwari.f5.si
-    secretName: hakuyou-tls
-  - hosts:
-    - task.zikanwari.f5.si
-    secretName: task-tls
-  - hosts:
-    - hutility.f5.si
-    secretName: hutility-tls
-  - hosts:
-    - docs.hutility.f5.si
-    secretName: hutility-docs-tls
+    - hosts:
+        - waitdisplay.zikanwari.f5.si
+      secretName: waitdisplay-tls
+    - hosts:
+        - mathattack.zikanwari.f5.si
+      secretName: mathattack-tls
+    - hosts:
+        - rad.mathattack.zikanwari.f5.si
+      secretName: rad-mathattack-tls
+    - hosts:
+        - api.launchpencil.f5.si
+      secretName: api-tls
+    - hosts:
+        - test.launchpencil.f5.si
+      secretName: test-tls
+    - hosts:
+        - studybattle.zikanwari.f5.si
+      secretName: studybattle-tls
+    - hosts:
+        - msky.launchpencil.f5.si
+      secretName: miisskey-tls
+    - hosts:
+        - minio.launchpencil.f5.si
+      secretName: minio-tls
+    - hosts:
+        - minio.zikanwari.f5.si
+      secretName: minio-zikan-tls
+    - hosts:
+        - qrdrop.zikanwari.f5.si
+      secretName: qrdrop-tls
+    - hosts:
+        - roulette.zikanwari.f5.si
+      secretName: roulette-tls
+    - hosts:
+        - registry.launchpencil.f5.si
+      secretName: registry-tls
+    - hosts:
+        - s.zikanwari.f5.si
+      secretName: shlink-tls
+    - hosts:
+        - s.launchpencil.f5.si
+      secretName: lp-shlink-tls
+    - hosts:
+        - speed.launchpencil.f5.si
+      secretName: librespeed-tls
+    - hosts:
+        - maicoder.f5.si
+      secretName: maicoder-web-tls
+    - hosts:
+        - api.maicoder.f5.si
+      secretName: maicoder-api-tls
+    - hosts:
+        - hakuyou.zikanwari.f5.si
+      secretName: hakuyou-tls
+    - hosts:
+        - task.zikanwari.f5.si
+      secretName: task-tls
+    - hosts:
+        - hutility.f5.si
+      secretName: hutility-tls
+    - hosts:
+        - docs.hutility.f5.si
+      secretName: hutility-docs-tls

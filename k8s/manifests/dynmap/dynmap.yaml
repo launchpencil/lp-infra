@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dynmap-mc01
+  namespace: minecraft
 spec:
   replicas: 1
   selector:
@@ -13,16 +14,16 @@ spec:
         app: dynmap-mc01
     spec:
       containers:
-      - name: dynmap-mc01
-        image: registry.launchpencil.f5.si/dynmap:mc01
-        imagePullPolicy: Always
+        - name: dynmap-mc01
+          image: registry.launchpencil.f5.si/dynmap:mc01
+          imagePullPolicy: Always
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dynmap-lobby
+  namespace: minecraft
 spec:
   replicas: 1
   selector:
@@ -34,16 +35,16 @@ spec:
         app: dynmap-lobby
     spec:
       containers:
-      - name: dynmap-lobby
-        image: registry.launchpencil.f5.si/dynmap:lobby
-        imagePullPolicy: Always
+        - name: dynmap-lobby
+          image: registry.launchpencil.f5.si/dynmap:lobby
+          imagePullPolicy: Always
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dynmap-sctech
+  namespace: minecraft
 spec:
   replicas: 1
   selector:
@@ -55,16 +56,16 @@ spec:
         app: dynmap-sctech
     spec:
       containers:
-      - name: dynmap-sctech
-        image: registry.launchpencil.f5.si/dynmap:sctech2
-        imagePullPolicy: Always
+        - name: dynmap-sctech
+          image: registry.launchpencil.f5.si/dynmap:sctech2
+          imagePullPolicy: Always
 
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dynmap-ric
+  namespace: minecraft
 spec:
   replicas: 1
   selector:
@@ -76,15 +77,15 @@ spec:
         app: dynmap-ric
     spec:
       containers:
-      - name: dynmap-ric
-        image: registry.launchpencil.f5.si/dynmap:ric2
-        imagePullPolicy: Always
+        - name: dynmap-ric
+          image: registry.launchpencil.f5.si/dynmap:ric2
+          imagePullPolicy: Always
 ---
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dynmap-mc02
+  namespace: minecraft
 spec:
   replicas: 1
   selector:
@@ -96,8 +97,8 @@ spec:
         app: dynmap-mc02
     spec:
       containers:
-      - name: dynmap-mc02
-        image: registry.launchpencil.f5.si/dynmap:mc02
-        imagePullPolicy: Always
+        - name: dynmap-mc02
+          image: registry.launchpencil.f5.si/dynmap:mc02
+          imagePullPolicy: Always
 
 ---

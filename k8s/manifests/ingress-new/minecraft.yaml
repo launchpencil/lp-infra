@@ -1,0 +1,82 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization, X-Api-Key, Content-Type"
+  name: ingress-minecraft
+  namespace: minecraft
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: mc01.dynmap.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dynmap-mc01
+                port:
+                  number: 80
+    - host: mc02.dynmap.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dynmap-mc02
+                port:
+                  number: 80
+    - host: lobby.dynmap.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dynmap-lobby
+                port:
+                  number: 80
+    - host: sctech.dynmap.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dynmap-sctech
+                port:
+                  number: 80
+    - host: ric.dynmap.zikanwari.f5.si
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dynmap-ric
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - mc01.dynmap.zikanwari.f5.si
+      secretName: dynmap-mc01-tls
+    - hosts:
+        - mc02.dynmap.zikanwari.f5.si
+      secretName: dynmap-mc02-tls
+    - hosts:
+        - lobby.dynmap.zikanwari.f5.si
+      secretName: dynmap-lobby-tls
+    - hosts:
+        - sctech.dynmap.zikanwari.f5.si
+      secretName: dynmap-sctech-tls
+    - hosts:
+        - ric.dynmap.zikanwari.f5.si
+      secretName: dynmap-ric-tls
