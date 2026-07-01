@@ -5,7 +5,7 @@ metadata:
     kubevirt.io/vm: dc01
   name: dc01
 spec:
-  runStrategy: Halted
+  runStrategy: Always
   template:
     metadata:
       labels:
