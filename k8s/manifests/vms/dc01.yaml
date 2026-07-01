@@ -2,15 +2,14 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   labels:
-    kubevirt.io/vm: mc-proxy
-  name: mc-proxy
-  namespace: minecraft
+    kubevirt.io/vm: dc01
+  name: dc01
 spec:
   runStrategy: Halted
   template:
     metadata:
       labels:
-        kubevirt.io/vm: mc-proxy
+        kubevirt.io/vm: dc01
     spec:
       domain:
         cpu:
@@ -35,4 +34,4 @@ spec:
       volumes:
       - name: dvdisk
         dataVolume:
-          name: mc-proxy
+          name: dc01
